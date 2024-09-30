@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Page</title>
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+
+    <style>
+      /* Body background color */
+      body {
+        background-color: #092635;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        color: #000;
+      }
+
+      /* Main Content Styles */
+      main {
+        padding: 20px;
+      }
+
+      .product-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px;
+        background-color: #092635;
+        min-height: calc(
+          100vh - 160px
+        ); /* Adjust based on footer/header height */
+      }
+
+      .course-package {
+        background-color: #fff;
+        padding: 20px;
+        text-align: center;
+        margin-bottom: 20px;
+        width: 700px;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .course-package h2 {
+        margin-bottom: 10px;
+        color: #092635; /* Supaya konsisten dengan tema */
+      }
+
+      .course-package button {
+        padding: 10px 20px;
+        background-color: #092635;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .course-package button:hover {
+        background-color: #064859;
+      }
+
+      .course-package .price-discount {
+        text-decoration: line-through;
+        color: gray;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header id="main-header">
+      <div>
+        <img src="images/logo-3.png" alt="Logo" />
+      </div>
+      <nav>
+        <a href="index.html">HOME</a>
+        <a href="aboutUs.html">ABOUT US</a>
+        <a href="product.html">PRODUCT</a>
+        <a href="profil.html">LOGIN</a>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <div class="product-container">
+        <!-- Paket Kursus 1 -->
+        <div class="course-package">
+          <h2>PAKET KURSUS ONLINE 1</h2>
+          <p>Langganan 1 bulan</p>
+          <p>Rp 1,000,000</p>
+          <button onclick="window.location.href='bayar1.html'">Pilih</button>
+        </div>
+
+        <!-- Paket Kursus 2 -->
+        <div class="course-package">
+          <h2>PAKET KURSUS ONLINE 2</h2>
+          <p>Langganan 3 bulan</p>
+          <p>Rp 3,000,000</p>
+          <button onclick="window.location.href='bayar2.html'">Pilih</button>
+        </div>
+
+        <!-- Paket Kursus 3 -->
+        <div class="course-package">
+          <h2>PAKET KURSUS ONLINE 3</h2>
+          <p>Langganan 6 bulan</p>
+          <p><span class="price-discount">Rp 6,000,000</span></p>
+          <p>Rp 5,100,000</p>
+          <button onclick="window.location.href='bayar3.html'">Pilih</button>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer id="main-footer">
+      <div class="footer-content">
+        <div class="social-icons">
+          <a href="#"><img src="images/facebook-icon.png" alt="Facebook" /></a>
+          <a href="#"><img src="images/x-icon.png" alt="Twitter" /></a>
+          <a href="#"><img src="images/linkedin-icon.png" alt="LinkedIn" /></a>
+          <a href="#"
+            ><img src="images/instagram-icon.png" alt="Instagram"
+          /></a>
+        </div>
+        <nav class="footer-nav">
+          <a href="#">Home</a>
+          <a href="#">About Us</a>
+          <a href="#">Product</a>
+          <a href="#">Login</a>
+          <a href="#">Contact</a>
+        </nav>
+        <p>
+          &copy; 2024 AIFYCODE Learning | All Rights Reserved. Made With Love
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

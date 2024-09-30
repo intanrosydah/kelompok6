@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <title>Modul 1</title>
+    <style>
+      body {
+        background-color: #092635;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        color: #000;
+      }
+
+      /* Header styles */
+      .header {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        background-color: #092635;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .header a {
+        text-decoration: none;
+        color: white;
+        font-size: 24px;
+      }
+
+      /* Question section styles */
+      .question-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 60vh;
+        background-color: #092635;
+        padding: 20px;
+      }
+
+      .question-box {
+        background-color: white;
+        padding: 40px;
+        width: 80%;
+        max-width: 600px; /* Set max-width for better layout */
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .question-box h3 {
+        color: #333;
+      }
+
+      .question-option {
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+
+      .question-option input {
+        margin-right: 10px;
+      }
+
+      .submit-button {
+        text-align: right;
+      }
+
+      .submit-button button {
+        padding: 7px 40px;
+        font-size: 14px;
+        background-color: #2a3a5b;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <div class="header">
+      <a href="modul-kuis.html">Modul 1</a>
+    </div>
+
+    <!-- Question Section -->
+    <div class="question-section">
+      <div class="question-box">
+        <h3>Pertanyaan 1</h3>
+        <div class="question-option">
+          <input type="radio" id="answer1" name="answer" />
+          <label for="answer1">Pilihan Jawaban 1</label>
+        </div>
+        <div class="question-option">
+          <input type="radio" id="answer2" name="answer" />
+          <label for="answer2">Pilihan Jawaban 2</label>
+        </div>
+        <div class="question-option">
+          <input type="radio" id="answer3" name="answer" />
+          <label for="answer3">Pilihan Jawaban 3</label>
+        </div>
+        <div class="question-option">
+          <input type="radio" id="answer4" name="answer" />
+          <label for="answer4">Pilihan Jawaban 4</label>
+        </div>
+        <div class="submit-button">
+          <button onclick="window.location.href='skor.html'">Submit</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="main-footer">
+      <div class="footer-content">
+        <div class="social-icons">
+          <a href="#"><img src="images/facebook-icon.png" alt="Facebook" /></a>
+          <a href="#"><img src="images/x-icon.png" alt="Twitter" /></a>
+          <a href="#"><img src="images/linkedin-icon.png" alt="LinkedIn" /></a>
+          <a href="#"
+            ><img src="images/instagram-icon.png" alt="Instagram"
+          /></a>
+        </div>
+        <nav class="footer-nav">
+          <a href="#">Home</a>
+          <a href="#">About Us</a>
+          <a href="#">Product</a>
+          <a href="#">Login</a>
+          <a href="#">Contact</a>
+        </nav>
+        <p>
+          &copy; 2024 AIFYCODE Learning | All Rights Reserved. Made With Love
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

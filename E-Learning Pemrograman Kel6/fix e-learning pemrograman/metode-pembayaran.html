@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pembayaran Langganan</title>
+    <link rel="stylesheet" href="css/footer.css" />
+    <style>
+      body {
+        background-color: #092635;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        color: #000;
+      }
+      main {
+        max-width: 600px;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin: 0 auto;
+      }
+      h2 {
+        text-align: center;
+        color: #333;
+      }
+      p {
+        text-align: center;
+        font-size: 18px;
+      }
+      h3,
+      h4 {
+        text-align: center;
+        margin-top: 30px;
+      }
+      .payment-method {
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      .payment-method input {
+        margin-right: 10px;
+      }
+      .payment-button {
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+      }
+      .payment-button button {
+        padding: 10px 50px;
+        font-size: 16px;
+        background-color: #2a3a5b;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .button-container {
+        display: flex;
+        justify-content: center; /* Mengatur jarak antara kedua tombol */
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+
+      button {
+        padding: 10px 20px;
+        background-color: transparent;
+        border: 1px solid white;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s;
+      }
+
+      button:hover {
+        background-color: white;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Konten Utama -->
+    <main>
+      <section>
+        <h2>Paket Langganan 1 Bulan</h2>
+        <p>Biaya: <strong>Rp 1.000.000</strong></p>
+
+        <!-- Metode Pembayaran -->
+        <div class="payment-method">
+          <h3>Metode Pembayaran</h3>
+          <div>
+            <input type="radio" id="va_bca" name="payment_method" />
+            <label for="va_bca">Virtual Account BCA</label><br /><br />
+            <input type="radio" id="va_bni" name="payment_method" />
+            <label for="va_bni">Virtual Account BNI</label><br /><br />
+            <input type="radio" id="va_mandiri" name="payment_method" />
+            <label for="va_mandiri">Virtual Account Mandiri</label><br /><br />
+          </div>
+        </div>
+
+        <!-- Tombol Pembayaran -->
+        <div class="payment-button">
+          <a href="bayar-sekarang.html" style="text-decoration: none">
+            <button>Bayar Sekarang</button>
+          </a>
+        </div>
+
+        <!-- Instruksi Pembayaran -->
+        <div>
+          <h4>Instruksi Pembayaran</h4>
+          <h4>
+            Setelah memilih metode pembayaran, silakan transfer ke Virtual
+            Account yang tersedia sesuai dengan pilihan Anda. Pembayaran akan
+            diproses secara otomatis setelah transfer berhasil dilakukan.
+          </h4>
+        </div>
+      </section>
+    </main>
+
+    <!-- Tombol Kembali -->
+    <div class="button-container">
+      <a href="bayar1.html">
+        <button>Kembali</button>
+      </a>
+    </div>
+
+    <!-- Footer -->
+    <footer id="main-footer">
+      <div class="footer-content">
+        <div class="social-icons">
+          <a href="#"><img src="images/facebook-icon.png" alt="Facebook" /></a>
+          <a href="#"><img src="images/x-icon.png" alt="Twitter" /></a>
+          <a href="#"><img src="images/linkedin-icon.png" alt="LinkedIn" /></a>
+          <a href="#"
+            ><img src="images/instagram-icon.png" alt="Instagram"
+          /></a>
+        </div>
+        <nav class="footer-nav">
+          <a href="#">Home</a>
+          <a href="#">About Us</a>
+          <a href="#">Product</a>
+          <a href="#">Login</a>
+          <a href="#">Contact</a>
+        </nav>
+        <p>
+          &copy; 2024 AIFYCODE Learning | All Rights Reserved. Made With Love
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pembayaran</title>
+    <link rel="stylesheet" href="css/footer.css" />
+    <style>
+      body {
+        background-color: #092635;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        color: #000;
+      }
+
+      .container {
+        padding: 70px;
+        text-align: center;
+      }
+
+      .payment-box {
+        background-color: #fff;
+        border-radius: 5px;
+        padding: 20px;
+        margin: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .title {
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      .row {
+        display: inline-block;
+        width: 45%;
+        text-align: left;
+        font-size: 18px;
+        margin: 10px 0;
+      }
+
+      .right {
+        text-align: right;
+      }
+
+      hr {
+        border: none;
+        border-top: 3px solid black;
+        margin: 20px auto;
+        width: 90%;
+      }
+
+      .button-container {
+        display: flex;
+        justify-content: space-between; /* Mengatur jarak antara kedua tombol */
+        margin-top: 20px;
+      }
+
+      button {
+        padding: 10px 20px;
+        background-color: transparent;
+        border: 1px solid black;
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s;
+      }
+
+      button:hover {
+        background-color: black;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="payment-box">
+        <div class="title">Pembayaran untuk Paket Kursus Online 2</div>
+        <div class="row">Harga 3 Bulan</div>
+        <div class="row right">Rp 3,000,000</div>
+        <hr />
+        <div class="row">Jumlah Tagihan</div>
+        <div class="row right">Rp 3,000,000</div>
+        <div class="button-container">
+          <button onclick="window.location.href='product.html'">Kembali</button>
+          <button onclick="window.location.href='metode-pembayaran.html'">
+            Bayar
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="main-footer">
+      <div class="footer-content">
+        <div class="social-icons">
+          <a href="#"><img src="images/facebook-icon.png" alt="Facebook" /></a>
+          <a href="#"><img src="images/x-icon.png" alt="Twitter" /></a>
+          <a href="#"><img src="images/linkedin-icon.png" alt="LinkedIn" /></a>
+          <a href="#"
+            ><img src="images/instagram-icon.png" alt="Instagram"
+          /></a>
+        </div>
+        <nav class="footer-nav">
+          <a href="#">Home</a>
+          <a href="#">About Us</a>
+          <a href="#">Product</a>
+          <a href="#">Login</a>
+          <a href="#">Contact</a>
+        </nav>
+        <p>
+          &copy; 2024 AIFYCODE Learning | All Rights Reserved. Made With Love
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

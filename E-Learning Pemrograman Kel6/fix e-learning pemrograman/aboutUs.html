@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <style>
+      body {
+        background-color: #092635;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        color: #fff;
+      }
+
+      .nav {
+        flex-grow: 1;
+        text-align: center;
+      }
+
+      .nav a {
+        text-decoration: none;
+        color: black;
+        margin-right: 20px;
+        font-weight: bold;
+      }
+
+      .nav a[href="aboutUs.html"] {
+        color: blue;
+      }
+
+      /* Main Content */
+      .content {
+        padding: 20px;
+      }
+
+      .section {
+        background-color: #092635;
+        margin-bottom: 20px;
+        padding: 20px;
+        text-align: center;
+      }
+
+      .section h2 {
+        margin-bottom: 20px;
+      }
+
+      .flex-container {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .flex-item {
+        width: 48%;
+        height: 200px;
+        text-align: center;
+        background-color: #ced4da;
+      }
+
+      .flex-item.transparent {
+        background-color: transparent;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header id="main-header">
+      <div>
+        <img src="images/logo-3.png" alt="Logo" />
+      </div>
+      <nav>
+        <a href="index.html">HOME</a>
+        <a href="aboutUs.html">ABOUT US</a>
+        <a href="product.html">PRODUCT</a>
+        <a href="profil.html">LOGIN</a>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <div class="content">
+      <!-- Platform Section -->
+      <div class="section">
+        <h2>PLATFORM YANG BEKERJASAMA</h2>
+      </div>
+
+      <!-- Alasan Memilih Web Section -->
+      <div class="section">
+        <div class="flex-container">
+          <h4 class="flex-item transparent">ALASAN MEMILIH WEB KAMU</h4>
+          <div class="flex-item">Gambar Praktik</div>
+        </div>
+      </div>
+
+      <!-- Slide Foto Praktik Section -->
+      <div class="section flex-container" style="background-color: #e2e3e5">
+        <div class="flex-item">Slide Foto Praktik 1</div>
+        <div class="flex-item">Slide Foto Praktik 2</div>
+      </div>
+
+      <!-- Sejarah dan Pendiri Section -->
+      <div class="section" style="background-color: #e2e3e5">
+        <div class="flex-container">
+          <div class="flex-item">Foto Pendiri</div>
+          <div class="flex-item transparent">Sedikit Sejarah Kami</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="main-footer">
+      <div class="footer-content">
+        <div class="social-icons">
+          <a href="#"><img src="images/facebook-icon.png" alt="Facebook" /></a>
+          <a href="#"><img src="images/x-icon.png" alt="Twitter" /></a>
+          <a href="#"><img src="images/linkedin-icon.png" alt="LinkedIn" /></a>
+          <a href="#"
+            ><img src="images/instagram-icon.png" alt="Instagram"
+          /></a>
+        </div>
+        <nav class="footer-nav">
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Services</a>
+          <a href="#">Team</a>
+          <a href="#">Contact</a>
+          <i class="fa-brands fa-instagram"></i>
+        </nav>
+        <p>
+          &copy; 2024 AIFYCODE Learning | All Rights Reserved. Made With Love
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

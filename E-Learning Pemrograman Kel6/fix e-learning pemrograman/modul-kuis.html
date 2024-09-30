@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <style>
+      body {
+        background-color: #092635;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        color: #000;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+      }
+
+      .btn {
+        margin-bottom: 20px;
+        padding: 10px 15px;
+        background-color: #2a3a5b;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .flex-container {
+        display: flex;
+      }
+
+      .module {
+        flex: 1;
+        padding: 20px;
+        border: 1px solid #ddd;
+      }
+
+      .module select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      .quiz {
+        flex: 3;
+        padding: 20px;
+        border: 1px solid #ddd;
+        margin-left: 20px;
+      }
+
+      .navigation-buttons {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Tombol Kembali ke Koridor Kelas -->
+      <button
+        class="btn"
+        onclick="window.location.href='koridor-dipelajari.html'"
+      >
+        Koridor Kelas
+      </button>
+
+      <div class="header">Belajar Dasar AI</div>
+
+      <div class="flex-container">
+        <div class="module">
+          <h4>Daftar Modul</h4>
+          <div style="margin-bottom: 10px">
+            <label for="modul1">Modul 1</label>
+            <select
+              id="modul1"
+              onchange="if(this.value === 'kuis') { window.location.href='modul-kuis.html'; }"
+            >
+              <option value="">Pilih Bab</option>
+              <option value="bab1">Bab 1</option>
+              <option value="bab2">Bab 2</option>
+              <option value="bab3">Bab 3</option>
+              <option value="kuis">Kuis</option>
+            </select>
+          </div>
+          <div style="margin-bottom: 10px">
+            <label for="modul2">Modul 2</label>
+            <select
+              id="modul2"
+              onchange="if(this.value === 'kuis') { window.location.href='modul-kuis.html'; }"
+            >
+              <option value="">Pilih Bab</option>
+              <option value="bab1">Bab 1</option>
+              <option value="bab2">Bab 2</option>
+              <option value="bab3">Bab 3</option>
+              <option value="kuis">Kuis</option>
+            </select>
+          </div>
+          <div style="margin-bottom: 10px">
+            <label for="modul3">Modul 3</label>
+            <select
+              id="modul3"
+              onchange="if(this.value === 'kuis') { window.location.href='modul-kuis.html'; }"
+            >
+              <option value="">Pilih Bab</option>
+              <option value="bab1">Bab 1</option>
+              <option value="bab2">Bab 2</option>
+              <option value="bab3">Bab 3</option>
+              <option value="kuis">Kuis</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="quiz">
+          <h3>Judul Kuis</h3>
+          <p>Deskripsi</p>
+          <button class="btn" onclick="window.location.href='kuis.html'">
+            Mulai Kuis
+          </button>
+        </div>
+      </div>
+
+      <!-- Tombol panah ke kiri dan kanan -->
+      <div class="navigation-buttons">
+        <button class="btn">← Sebelumnya</button>
+        <button
+          class="btn"
+          onclick="window.location.href='koridor-diselesaikan.html'"
+        >
+          Selanjutnya →
+        </button>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="main-footer">
+      <div class="footer-content">
+        <div class="social-icons">
+          <a href="#"><img src="images/facebook-icon.png" alt="Facebook" /></a>
+          <a href="#"><img src="images/x-icon.png" alt="Twitter" /></a>
+          <a href="#"><img src="images/linkedin-icon.png" alt="LinkedIn" /></a>
+          <a href="#"
+            ><img src="images/instagram-icon.png" alt="Instagram"
+          /></a>
+        </div>
+        <nav class="footer-nav">
+          <a href="#">Home</a>
+          <a href="#">About Us</a>
+          <a href="#">Product</a>
+          <a href="#">Login</a>
+          <a href="#">Contact</a>
+        </nav>
+        <p>
+          &copy; 2024 AIFYCODE Learning | All Rights Reserved. Made With Love
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+
+    <style>
+      /* Body background color */
+      body {
+        background-color: #092635;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        color: #fff;
+      }
+
+      /* Main Content Styles */
+      main {
+        padding: 20px;
+      }
+
+      section {
+        background-color: #092635;
+        padding: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      h2 {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      p {
+        font-size: 20px;
+        font-weight: thin;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      .welcome-text {
+        margin: 20px 0;
+        font-size: 18px;
+        text-align: center;
+      }
+
+      .team-container {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+      }
+
+      .team-member {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #092635;
+        padding: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .team-member img {
+        width: 100%;
+        height: auto;
+        max-width: 150px;
+        border-radius: 50%;
+        margin-bottom: 10px;
+      }
+
+      .team-member p {
+        margin: 5px 0;
+        text-align: center;
+      }
+
+      .center-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-direction: column;
+      }
+
+      /* Style for large image */
+      .center-content img {
+        max-width: 80%; /* Membatasi ukuran gambar agar responsive */
+        height: auto;
+        margin-bottom: 1px; /* Spasi di bawah gambar */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header id="main-header">
+      <div>
+        <img src="images/logo-3.png" alt="Logo" />
+      </div>
+      <nav>
+        <a href="index.html">HOME</a>
+        <a href="aboutUs.html">ABOUT US</a>
+        <a href="product.html">PRODUCT</a>
+        <a href="profil.html">LOGIN</a>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <section class="center-content">
+        <img src="images/logo-3.png" alt="Gambar Utama" />
+        <h2>Selamat Datang!</h2>
+        <p
+          style="padding-right: 100px; padding-left: 100px"
+          class="welcome-text"
+        >
+          AIFYCODE Learning adalah platform e-learning inovatif yang menawarkan
+          kursus pemrograman interaktif untuk semua tingkat, mulai dari pemula
+          hingga lanjutan. Materi pembelajaran disajikan dalam bentuk modul yang
+          dapat diakses fleksibel kapan pun dan di mana pun, memungkinkan Anda
+          belajar sesuai dengan waktu yang Anda miliki. Selain itu, AIFYCODE
+          Learning dilengkapi dengan fitur Daily Coding, di mana poin yang
+          diperoleh dari latihan coding dapat ditukar dengan kursus gratis.
+          Bergabunglah dengan komunitas pembelajar kami dan tingkatkan
+          keterampilan pemrograman Anda dengan cara yang menyenangkan dan
+          efektif!
+        </p>
+      </section>
+
+      <section>
+        <h2>Tim Kami</h2>
+        <div class="team-container">
+          <div class="team-member">
+            <img src="images/gambar_orang.jpg" alt="Gambar Orang 1" />
+            <p>Nama Orang 1</p>
+            <p>Jabatan 1</p>
+          </div>
+          <div class="team-member">
+            <img src="images/gambar_orang.jpg" alt="Gambar Orang 2" />
+            <p>Nama Orang 2</p>
+            <p>Jabatan 2</p>
+          </div>
+          <div class="team-member">
+            <img src="images/gambar_orang.jpg" alt="Gambar Orang 3" />
+            <p>Nama Orang 3</p>
+            <p>Jabatan 3</p>
+          </div>
+          <div class="team-member">
+            <img src="images/gambar_orang.jpg" alt="Gambar Orang 4" />
+            <p>Nama Orang 4</p>
+            <p>Jabatan 4</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="main-footer">
+      <div class="footer-content">
+        <div class="social-icons">
+          <a href="#"><img src="images/facebook-icon.png" alt="Facebook" /></a>
+          <a href="#"><img src="images/x-icon.png" alt="Twitter" /></a>
+          <a href="#"><img src="images/linkedin-icon.png" alt="LinkedIn" /></a>
+          <a href="#"
+            ><img src="images/instagram-icon.png" alt="Instagram"
+          /></a>
+        </div>
+        <nav class="footer-nav">
+          <a href="#">Home</a>
+          <a href="#">About Us</a>
+          <a href="#">Product</a>
+          <a href="#">Login</a>
+          <a href="#">Contact</a>
+          <i class="fa-brands fa-instagram"></i>
+        </nav>
+        <p>
+          &copy; 2024 AIFYCODE Learning | All Rights Reserved. Made With Love
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

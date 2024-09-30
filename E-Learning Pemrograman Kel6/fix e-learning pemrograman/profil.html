@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profil</title>
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <style>
+      body {
+        background-color: #092635;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        color: #000;
+      }
+
+      .profile-container {
+        background-color: white;
+        border-radius: 5px;
+        margin: 20px auto;
+        padding: 20px;
+        max-width: 800px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .profile-header {
+        background-color: #e0e0e0;
+        padding: 10px;
+        text-align: center;
+        border-radius: 5px 5px 0 0;
+      }
+
+      .profile-header a {
+        color: black;
+        text-decoration: none;
+        padding: 10px;
+        margin-left: 20px;
+      }
+
+      .form-label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+
+      .form-input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin-bottom: 10px;
+      }
+
+      .profile-image {
+        width: 100%;
+        max-width: 200px;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header id="main-header">
+      <div>
+        <img src="images/logo-3.png" alt="Logo" />
+      </div>
+      <nav>
+        <a href="index.html">HOME</a>
+        <a href="progress.html">PROGRESS</a>
+        <a href="daily-coding.html">DAILY CODING</a>
+        <a href="profil.html">PROFIL</a>
+      </nav>
+    </header>
+
+    <div class="profile-container">
+      <div class="profile-header">
+        <h1 style="margin: 0">PROFIL</h1>
+        <a href="#">PROGRESS</a>
+        <a href="#">DAILY CODING</a>
+      </div>
+      <div style="padding: 20px">
+        <div style="display: flex; justify-content: space-between">
+          <div style="flex: 1; padding: 20px">
+            <label for="nama" class="form-label">NAMA:</label>
+            <input
+              type="text"
+              id="nama"
+              name="nama"
+              placeholder="Nama Lengkap"
+              class="form-input"
+            />
+
+            <label for="email" class="form-label">EMAIL:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Alamat Email"
+              class="form-input"
+            />
+
+            <label for="paket" class="form-label">PAKET:</label>
+            <input
+              type="text"
+              id="paket"
+              name="paket"
+              placeholder="Paket Anda"
+              class="form-input"
+            />
+          </div>
+          <div style="flex: 1; padding: 20px; text-align: center">
+            <img
+              src="https://via.placeholder.com/200x200"
+              alt="Foto Profil"
+              class="profile-image"
+            />
+            <p>FOTO PROFIL</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer id="main-footer">
+      <div class="footer-content">
+        <div class="social-icons">
+          <a href="#"><img src="images/facebook-icon.png" alt="Facebook" /></a>
+          <a href="#"><img src="images/x-icon.png" alt="Twitter" /></a>
+          <a href="#"><img src="images/linkedin-icon.png" alt="LinkedIn" /></a>
+          <a href="#"
+            ><img src="images/instagram-icon.png" alt="Instagram"
+          /></a>
+        </div>
+        <nav class="footer-nav">
+          <a href="#">Home</a>
+          <a href="#">About Us</a>
+          <a href="#">Product</a>
+          <a href="#">Login</a>
+          <a href="#">Contact</a>
+        </nav>
+        <p>
+          &copy; 2024 AIFYCODE Learning | All Rights Reserved. Made With Love
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

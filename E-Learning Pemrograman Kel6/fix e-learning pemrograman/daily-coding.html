@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daily Coding</title>
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <style>
+      body {
+        background-color: #092635;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        color: #000;
+      }
+
+      h1 {
+        text-align: center;
+        color: #fff;
+      }
+
+      /* Main Content */
+      main {
+        text-align: center;
+        padding: 20px;
+      }
+
+      section {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+      }
+
+      select,
+      textarea,
+      button {
+        padding: 10px;
+        margin-top: 10px;
+      }
+
+      button {
+        background-color: #2a3a5b;
+        color: white;
+        border: none;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header id="main-header">
+      <div>
+        <img src="images/logo-3.png" alt="Logo" />
+      </div>
+      <nav>
+        <a href="index.html">HOME</a>
+        <a href="progress.html">PROGRESS</a>
+        <a href="daily-coding.html">DAILY CODING</a>
+        <a href="profil.html">PROFIL</a>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <h1>Daily Coding</h1>
+      <!-- Informasi API yang telah dikumpulkan -->
+      <div style="margin-bottom: 20px">
+        <h3 style="color: #fff">
+          Api yang Dikumpulkan: <span style="color: red">10 Api</span>
+        </h3>
+      </div>
+      <section>
+        <h2>Tantangan Harian</h2>
+        <p>
+          Tingkatkan kemampuan coding Anda dengan tantangan harian dari beginner
+          hingga advanced.
+        </p>
+
+        <!-- Level dan Tantangan -->
+        <div style="margin-bottom: 20px">
+          <h3>Pilih Level:</h3>
+          <select>
+            <option value="beginner">Beginner</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="advanced">Advanced</option>
+          </select>
+          <button>Mulai Tantangan</button>
+        </div>
+
+        <!-- Tantangan dan Pengiriman Kode -->
+        <div>
+          <h3>Tantangan Saat Ini:</h3>
+          <p>Buat program untuk menghitung bilangan genap dari 1 sampai 100.</p>
+          <textarea
+            placeholder="Tulis kode Anda..."
+            style="width: 100%; height: 150px"
+          ></textarea>
+          <a href="kode-daily-coding.html" style="text-decoration: none">
+            <div style="margin-top: 10px">
+              <button>Kirim Kode</button>
+            </div>
+          </a>
+        </div>
+
+        <!-- Informasi Reward -->
+        <div style="margin-top: 20px">
+          <p>
+            Selesaikan tantangan dan dapatkan 1 Api. Kumpulkan 100 Api untuk
+            membuka kursus lanjutan!
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="main-footer">
+      <div class="footer-content">
+        <div class="social-icons">
+          <a href="#"><img src="images/facebook-icon.png" alt="Facebook" /></a>
+          <a href="#"><img src="images/x-icon.png" alt="Twitter" /></a>
+          <a href="#"><img src="images/linkedin-icon.png" alt="LinkedIn" /></a>
+          <a href="#"
+            ><img src="images/instagram-icon.png" alt="Instagram"
+          /></a>
+        </div>
+        <nav class="footer-nav">
+          <a href="#">Home</a>
+          <a href="#">About Us</a>
+          <a href="#">Product</a>
+          <a href="#">Login</a>
+          <a href="#">Contact</a>
+        </nav>
+        <p>
+          &copy; 2024 AIFYCODE Learning | All Rights Reserved. Made With Love
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
