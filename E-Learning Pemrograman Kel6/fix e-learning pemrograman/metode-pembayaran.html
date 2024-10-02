@@ -40,6 +40,18 @@
       .payment-method input {
         margin-right: 10px;
       }
+      .payment-method label img {
+        width: 100px; /* Ukuran logo */
+        vertical-align: middle;
+        margin-right: 10px;
+      }
+      .payment-method label {
+        display: inline-flex;
+        align-items: center;
+        margin-right: 20px;
+        font-size: 18px; /* Ukuran font untuk nama bank */
+        color: #333;
+      }
       .payment-button {
         display: flex;
         justify-content: center;
@@ -57,7 +69,7 @@
 
       .button-container {
         display: flex;
-        justify-content: center; /* Mengatur jarak antara kedua tombol */
+        justify-content: center;
         margin-top: 20px;
         margin-bottom: 20px;
       }
@@ -89,11 +101,17 @@
           <h3>Metode Pembayaran</h3>
           <div>
             <input type="radio" id="va_bca" name="payment_method" />
-            <label for="va_bca">Virtual Account BCA</label><br /><br />
+            <label for="va_bca">
+              <img src="images/logobca.png" alt="BCA Logo" /> </label
+            ><br /><br />
             <input type="radio" id="va_bni" name="payment_method" />
-            <label for="va_bni">Virtual Account BNI</label><br /><br />
+            <label for="va_bni">
+              <img src="images/logobni.png" alt="BNI Logo" /> </label
+            ><br /><br />
             <input type="radio" id="va_mandiri" name="payment_method" />
-            <label for="va_mandiri">Virtual Account Mandiri</label><br /><br />
+            <label for="va_mandiri">
+              <img src="images/logomandiri.png" alt="Mandiri Logo" />
+            </label>
           </div>
         </div>
 
@@ -135,11 +153,11 @@
           /></a>
         </div>
         <nav class="footer-nav">
-          <a href="#">Home</a>
-          <a href="#">About Us</a>
-          <a href="#">Product</a>
-          <a href="#">Login</a>
-          <a href="#">Contact</a>
+          <a href="index.html">Home</a>
+          <a href="aboutUs.html">About Us</a>
+          <a href="product.html">Product</a>
+          <a href="profil.html">Login</a>
+          <a href="contact.html">Contact</a>
         </nav>
         <p>
           &copy; 2024 AIFYCODE Learning | All Rights Reserved. Made With Love
