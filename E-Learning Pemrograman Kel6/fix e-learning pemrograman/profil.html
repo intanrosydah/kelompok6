@@ -11,10 +11,14 @@
       rel="stylesheet"
     />
     <style>
+      /* Body background image */
       body {
-        background-color: #092635;
+        background-image: url("images/profilback.jpg"); /* Ganti path dengan path gambar */
+        background-size: cover; /* Membuat gambar menyesuaikan ukuran halaman */
+        background-position: center; /* Memposisikan gambar di tengah */
+        background-repeat: no-repeat; /* Menpengulangan gambar */
         margin: 0;
-        font-family: "Montserrat", sans-serif;
+        font-family:"Montserrat", sans-serif;
         color: #000;
       }
 
@@ -23,8 +27,20 @@
         border-radius: 5px;
         margin: 20px auto;
         padding: 20px;
-        max-width: 800px;
+        max-width: 500px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px;
+        /* background: rgba(9, 38, 53, 0.8); */
+        min-height: calc(
+          100vh - 160px
+        ); /* Adjust based on footer/header height */
+        border-radius: 10px;
+      }
+
       }
 
       .profile-header {
@@ -38,7 +54,7 @@
         color: black;
         text-decoration: none;
         padding: 10px;
-        margin-left: 20px;
+        margin-right: 50px;
       }
 
       .form-label {
@@ -56,6 +72,7 @@
       }
 
       .profile-image {
+        margin: 0;
         width: 100%;
         max-width: 200px;
         border-radius: 50%;
@@ -78,9 +95,7 @@
 
     <div class="profile-container">
       <div class="profile-header">
-        <h1 style="margin: 0">PROFIL</h1>
-        <a href="#">PROGRESS</a>
-        <a href="#">DAILY CODING</a>
+        <h1 style="margin: 0; position: relative">PROFIL</h1>
       </div>
       <div style="padding: 20px">
         <div style="display: flex; justify-content: space-between">
@@ -114,7 +129,7 @@
           </div>
           <div style="flex: 1; padding: 20px; text-align: center">
             <img
-              src="https://via.placeholder.com/200x200"
+              src="images/ankku.jpeg"
               alt="Foto Profil"
               class="profile-image"
             />
@@ -123,6 +138,7 @@
         </div>
       </div>
     </div>
+
     <!-- Footer -->
     <footer id="main-footer">
       <div class="footer-content">
