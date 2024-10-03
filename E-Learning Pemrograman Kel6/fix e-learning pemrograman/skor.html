@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/footer.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap"
       rel="stylesheet"
@@ -11,56 +10,59 @@
     <title>Modul 1 - Score</title>
     <style>
       body {
-        background-color: #092635;
         margin: 0;
         font-family: "Montserrat", sans-serif;
         color: #000;
       }
 
-      /* Header styles */
-      .header {
-        display: flex;
-        align-items: center;
-        padding: 10px;
-        background-color: #092635;
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-      }
-
-      .header a {
-        text-decoration: none;
-        color: white;
-        font-size: 24px;
-      }
-
-      /* Score section styles */
-      .score-section {
-        display: flex;
+      /* Modal styles */
+      .modal {
+        display: flex; /* Modal akan langsung tampil */
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #092635; /* Background biru penuh */
         justify-content: center;
         align-items: center;
-        height: 60vh;
-        background-color: #092635;
       }
 
-      .score-box {
+      .modal-content {
         background-color: white;
-        padding: 70px;
+        padding: 50px;
+        padding-bottom: 70px;
         text-align: center;
         border-radius: 10px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        margin-bottom: 50px;
+        width: 80%;
+        max-width: 600px;
       }
 
-      .score-box h2 {
+      .modal-content h2 {
         color: #333;
+        font-size: 30px;
         margin-bottom: 20px;
       }
 
-      .score-box h1 {
-        font-size: 90px;
+      .modal-content h1 {
+        font-size: 120px;
         margin: 20px 0;
       }
 
-      .score-box button {
+      .thumbs-container {
+        display: flex;
+        justify-content: center;
+        gap: 10px; /* Jarak antar gambar */
+        margin-bottom: 20px;
+      }
+
+      .thumbs-container img {
+        width: 65px; /* Ukuran gambar */
+      }
+
+      .modal-content button {
         padding: 10px 40px;
         font-size: 16px;
         background-color: #2a3a5b;
@@ -72,42 +74,19 @@
     </style>
   </head>
   <body>
-    <!-- Header -->
-    <div class="header">
-      <a href="modul-kuis.html">Modul 1</a>
-    </div>
-
-    <!-- Score Section -->
-    <div class="score-section">
-      <div class="score-box">
+    <!-- Modal Pop-up -->
+    <div id="scoreModal" class="modal">
+      <div class="modal-content">
+        <!-- Container untuk 3 gambar jempol -->
+        <div class="thumbs-container">
+          <img src="images/jempol.png" alt="Jempol 1" />
+          <img src="images/jempol.png" alt="Jempol 2" />
+          <img src="images/jempol.png" alt="Jempol 3" />
+        </div>
         <h2>SCORE</h2>
         <h1>100</h1>
         <button onclick="window.location.href='belajar.html'">Lanjut</button>
       </div>
     </div>
-
-    <!-- Footer -->
-    <footer id="main-footer">
-      <div class="footer-content">
-        <div class="social-icons">
-          <a href="#"><img src="images/facebook-icon.png" alt="Facebook" /></a>
-          <a href="#"><img src="images/x-icon.png" alt="Twitter" /></a>
-          <a href="#"><img src="images/linkedin-icon.png" alt="LinkedIn" /></a>
-          <a href="#"
-            ><img src="images/instagram-icon.png" alt="Instagram"
-          /></a>
-        </div>
-        <nav class="footer-nav">
-          <a href="index.html">Home</a>
-          <a href="aboutUs.html">About Us</a>
-          <a href="product.html">Product</a>
-          <a href="profil.html">Login</a>
-          <a href="contact.html">Contact</a>
-        </nav>
-        <p>
-          &copy; 2024 AIFYCODE Learning | All Rights Reserved. Made With Love
-        </p>
-      </div>
-    </footer>
   </body>
 </html>
