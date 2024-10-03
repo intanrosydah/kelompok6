@@ -8,9 +8,12 @@
     <link rel="stylesheet" href="css/footer.css" />
 
     <style>
-      /* Body background color */
+      /* Body background image */
       body {
-        background-color: #092635;
+        background-image: url("images/bg_produk.jpg"); /* Ganti path dengan path gambar */
+        background-size: cover; /* Membuat gambar menyesuaikan ukuran halaman */
+        background-position: center; /* Memposisikan gambar di tengah */
+        background-repeat: no-repeat; /* Mencegah pengulangan gambar */
         margin: 0;
         font-family: Arial, sans-serif;
         color: #000;
@@ -27,10 +30,11 @@
         align-items: center;
         flex-direction: column;
         padding: 20px;
-        background-color: #092635;
+        /* background: rgba(9, 38, 53, 0.8); */
         min-height: calc(
           100vh - 160px
         ); /* Adjust based on footer/header height */
+        border-radius: 10px;
       }
 
       .course-package {
