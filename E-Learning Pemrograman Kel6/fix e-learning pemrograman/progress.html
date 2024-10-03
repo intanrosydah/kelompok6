@@ -15,6 +15,9 @@
       }
 
       .content {
+        display: flex;
+        justify-content: space-between; /* Agar bagian kiri dan kanan memiliki jarak */
+        gap: 20px; /* Memberikan jarak antar kolom */
         padding: 20px;
       }
 
@@ -26,8 +29,8 @@
       .section {
         background-color: #e0e0e0;
         padding: 20px;
-        margin-bottom: 20px;
         border-radius: 8px;
+        width: 48%; /* Mengatur lebar kedua section agar muat dalam satu baris */
       }
 
       .section h2 {
@@ -52,6 +55,30 @@
         border-radius: 20px;
         cursor: pointer;
       }
+
+      footer {
+        background-color: #1c2237;
+        padding: 10px;
+        color: white;
+        text-align: center;
+      }
+
+      .footer-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .footer-nav a {
+        color: white;
+        margin: 0 10px;
+        text-decoration: none;
+      }
+
+      .social-icons img {
+        width: 30px;
+        margin: 0 5px;
+      }
     </style>
   </head>
   <body>
@@ -69,8 +96,7 @@
     </header>
 
     <div class="content">
-      <h1>Progress Belajar</h1>
-
+      <!-- Kelas yang Dipelajari -->
       <div class="section">
         <h2>Kelas yang Dipelajari</h2>
         <div class="class-item">
@@ -81,14 +107,12 @@
         </div>
         <div class="class-item">
           <span>Belajar Dasar Pemrograman Web</span>
-          <!-- Kelas baru -->
           <button onclick="window.location.href='koridor-pemrograman-web.html'">
             Koridor Kelas
           </button>
         </div>
         <div class="class-item">
           <span>Belajar Dasar Machine Learning</span>
-          <!-- Kelas baru -->
           <button
             onclick="window.location.href='koridor-machine-learning.html'"
           >
@@ -97,6 +121,7 @@
         </div>
       </div>
 
+      <!-- Kelas yang Diselesaikan -->
       <div class="section">
         <h2>Kelas yang Diselesaikan</h2>
         <div class="class-item">
