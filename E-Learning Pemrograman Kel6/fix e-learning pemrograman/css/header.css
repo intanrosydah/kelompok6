@@ -1,4 +1,4 @@
-/* Style for sticky header */
+/* Style for sticky transparent header */
 header {
   position: sticky;
   top: 0;
@@ -6,11 +6,15 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #021526;
+  background-color: transparent; /* Header transparent awal */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 5px;
-  z-index: 1000; /* Ensure the header stays above other content */
+  z-index: 1000;
   transition: background-color 0.3s ease;
+}
+
+header.scrolled {
+  background-color: rgba(2, 21, 38, 0.85); /* Ubah warna saat scroll */
 }
 
 header img {
@@ -38,4 +42,25 @@ body {
 
 main {
   padding: 20px;
+}
+
+/* Header styling */
+#main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(2, 21, 38, 0.85); /* Ubah warna saat scroll */
+  padding: 10px;
+}
+
+#main-header nav a {
+  color: white;
+  align-items: center;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+#main-header nav a:hover {
+  color: #fff;
+  text-decoration: underline;
 }
