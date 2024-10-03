@@ -1,20 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
     <title>Document</title>
-</head>
-<body>
+    <style>
+      body {
+        font-family: "Montserrat", sans-serif; /* Menggunakan font Montserrat */
+      }
+      .button-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+      }
+      .button-container button {
+        padding: 10px 20px;
+        margin: 0 10px;
+        background-color: #2a3a5b;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .button-container button:hover {
+        background-color: #1f2c45;
+      }
+    </style>
+  </head>
+  <body>
     <section
-        style="
-          background-color: #fff;
-          padding: 20px;
-          margin-bottom: 20px;
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        "
-      >
-	<img src="images/sertif_1.jpg" alt="Sertifikat" style="max-width: 65%; height: auto; display: block; margin: 0 auto;">
+      style="
+        background-color: #fff;
+        padding: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      "
+    >
+      <img
+        src="images/sertif_1.jpg"
+        alt="Sertifikat"
+        id="sertifImage"
+        style="max-width: 65%; height: auto; display: block; margin: 0 auto"
+      />
     </section>
-</body>
+
+    <!-- Tombol Print dan Download -->
+    <div class="button-container">
+      <button onclick="printSertif()">Print Sertifikat</button>
+      <button onclick="downloadSertif()">Download Sertifikat</button>
+    </div>
+
+    <script>
+      // Fungsi untuk print sertifikat
+      function printSertif() {
+        window.print(); // Fungsi built-in untuk mencetak halaman
+      }
+
+      // Fungsi untuk download sertifikat
+      function downloadSertif() {
+        const sertif = document.getElementById("sertifImage");
+        const link = document.createElement("a");
+        link.href = sertif.src;
+        link.download = "sertifikat.jpg"; // Nama file saat diunduh
+        link.click();
+      }
+    </script>
+  </body>
 </html>

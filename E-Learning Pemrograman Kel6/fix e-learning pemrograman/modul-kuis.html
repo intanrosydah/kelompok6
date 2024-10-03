@@ -4,11 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/footer.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
     <style>
       body {
         background-color: #092635;
         margin: 0;
-        font-family: Arial, sans-serif;
+        font-family: "Montserrat", sans-serif;
         color: #000;
       }
 
@@ -21,6 +25,21 @@
         border-radius: 10px;
       }
 
+      .back-btn {
+        margin-bottom: 20px;
+        padding: 10px 15px;
+        background-color: #2a3a5b;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .back-btn:hover {
+        background-color: #1f263b;
+      }
+
       .btn {
         margin-bottom: 20px;
         padding: 10px 15px;
@@ -31,28 +50,90 @@
         cursor: pointer;
       }
 
-      .flex-container {
+      .module-title {
+        font-size: 24px;
+        font-weight: bold;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding: 10px;
+        background-color: #f2f2f2;
+        border-radius: 5px;
+        text-align: center;
+      }
+
+      .module-container {
         display: flex;
       }
 
-      .module {
+      .module-list {
         flex: 1;
         padding: 20px;
         border: 1px solid #ddd;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+        margin-right: 20px;
       }
 
-      .module select {
-        width: 100%;
+      .module-list h4 {
+        text-align: center;
+        color: #2a3a5b;
+      }
+
+      .dropdown {
+        position: relative;
+        display: block;
+        margin-bottom: 15px;
+      }
+
+      .dropbtn {
+        background-color: #2a3a5b;
+        color: white;
         padding: 10px;
-        border: 1px solid #ccc;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+        width: 100%;
         border-radius: 5px;
       }
 
-      .quiz {
+      .dropbtn:hover {
+        background-color: #1f263b;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        width: 100%;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+
+      .dropdown-content a:hover {
+        background-color: #ddd;
+      }
+
+      .show {
+        display: block;
+      }
+
+      .module-content {
         flex: 3;
         padding: 20px;
         border: 1px solid #ddd;
-        margin-left: 20px;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+      }
+
+      .module-content h3 {
+        color: #2a3a5b;
       }
 
       .navigation-buttons {
@@ -60,65 +141,124 @@
         justify-content: space-between;
         margin-top: 20px;
       }
+
+      .navigation-buttons button {
+        padding: 10px 15px;
+        border: none;
+        background-color: #2a3a5b;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .navigation-buttons button:hover {
+        background-color: #1f263b;
+      }
     </style>
   </head>
   <body>
     <div class="container">
       <!-- Tombol Kembali ke Koridor Kelas -->
       <button
-        class="btn"
+        class="back-btn"
         onclick="window.location.href='koridor-dipelajari.html'"
       >
         Koridor Kelas
       </button>
 
-      <div class="header">Belajar Dasar AI</div>
+      <div class="module-title">Belajar Dasar AI</div>
 
-      <div class="flex-container">
-        <div class="module">
+      <div class="module-container">
+        <div class="module-list">
           <h4>Daftar Modul</h4>
-          <div style="margin-bottom: 10px">
-            <label for="modul1">Modul 1</label>
-            <select
-              id="modul1"
-              onchange="if(this.value === 'kuis') { window.location.href='modul-kuis.html'; }"
-            >
-              <option value="">Pilih Bab</option>
-              <option value="bab1">Bab 1</option>
-              <option value="bab2">Bab 2</option>
-              <option value="bab3">Bab 3</option>
-              <option value="kuis">Kuis</option>
-            </select>
+
+          <!-- Dropdown untuk Modul 1 -->
+          <div class="dropdown">
+            <button onclick="toggleDropdown('dropdown1')" class="dropbtn">
+              Modul 1
+            </button>
+            <div id="dropdown1" class="dropdown-content">
+              <a
+                href="#"
+                data-value="bab1"
+                onclick="selectModule('Modul 1', 'Bab 1')"
+                >Bab 1</a
+              >
+              <a
+                href="#"
+                data-value="bab2"
+                onclick="selectModule('Modul 1', 'Bab 2')"
+                >Bab 2</a
+              >
+              <a
+                href="#"
+                data-value="bab3"
+                onclick="selectModule('Modul 1', 'Bab 3')"
+                >Bab 3</a
+              >
+              <a href="modul-kuis.html">Kuis</a>
+            </div>
           </div>
-          <div style="margin-bottom: 10px">
-            <label for="modul2">Modul 2</label>
-            <select
-              id="modul2"
-              onchange="if(this.value === 'kuis') { window.location.href='modul-kuis.html'; }"
-            >
-              <option value="">Pilih Bab</option>
-              <option value="bab1">Bab 1</option>
-              <option value="bab2">Bab 2</option>
-              <option value="bab3">Bab 3</option>
-              <option value="kuis">Kuis</option>
-            </select>
+
+          <!-- Dropdown untuk Modul 2 -->
+          <div class="dropdown">
+            <button onclick="toggleDropdown('dropdown2')" class="dropbtn">
+              Modul 2
+            </button>
+            <div id="dropdown2" class="dropdown-content">
+              <a
+                href="#"
+                data-value="bab1"
+                onclick="selectModule('Modul 2', 'Bab 1')"
+                >Bab 1</a
+              >
+              <a
+                href="#"
+                data-value="bab2"
+                onclick="selectModule('Modul 2', 'Bab 2')"
+                >Bab 2</a
+              >
+              <a
+                href="#"
+                data-value="bab3"
+                onclick="selectModule('Modul 2', 'Bab 3')"
+                >Bab 3</a
+              >
+              <a href="modul-kuis.html">Kuis</a>
+            </div>
           </div>
-          <div style="margin-bottom: 10px">
-            <label for="modul3">Modul 3</label>
-            <select
-              id="modul3"
-              onchange="if(this.value === 'kuis') { window.location.href='modul-kuis.html'; }"
-            >
-              <option value="">Pilih Bab</option>
-              <option value="bab1">Bab 1</option>
-              <option value="bab2">Bab 2</option>
-              <option value="bab3">Bab 3</option>
-              <option value="kuis">Kuis</option>
-            </select>
+
+          <!-- Dropdown untuk Modul 3 -->
+          <div class="dropdown">
+            <button onclick="toggleDropdown('dropdown3')" class="dropbtn">
+              Modul 3
+            </button>
+            <div id="dropdown3" class="dropdown-content">
+              <a
+                href="#"
+                data-value="bab1"
+                onclick="selectModule('Modul 3', 'Bab 1')"
+                >Bab 1</a
+              >
+              <a
+                href="#"
+                data-value="bab2"
+                onclick="selectModule('Modul 3', 'Bab 2')"
+                >Bab 2</a
+              >
+              <a
+                href="#"
+                data-value="bab3"
+                onclick="selectModule('Modul 3', 'Bab 3')"
+                >Bab 3</a
+              >
+              <a href="modul-kuis.html">Kuis</a>
+            </div>
           </div>
         </div>
 
-        <div class="quiz">
+        <div class="module-content">
           <h3>Judul Kuis</h3>
           <p>Deskripsi</p>
           <button class="btn" onclick="window.location.href='kuis.html'">
@@ -129,11 +269,10 @@
 
       <!-- Tombol panah ke kiri dan kanan -->
       <div class="navigation-buttons">
-        <button class="btn">← Sebelumnya</button>
-        <button
-          class="btn"
-          onclick="window.location.href='koridor-diselesaikan.html'"
-        >
+        <button onclick="window.location.href='belajar.html'">
+          ← Sebelumnya
+        </button>
+        <button onclick="window.location.href='koridor-diselesaikan.html'">
           Selanjutnya →
         </button>
       </div>
@@ -151,16 +290,45 @@
           /></a>
         </div>
         <nav class="footer-nav">
-          <a href="#">Home</a>
-          <a href="#">About Us</a>
-          <a href="#">Product</a>
-          <a href="#">Login</a>
-          <a href="#">Contact</a>
+          <a href="index.html">Home</a>
+          <a href="aboutUs.html">About Us</a>
+          <a href="product.html">Product</a>
+          <a href="profil.html">Login</a>
+          <a href="contact.html">Contact</a>
         </nav>
         <p>
           &copy; 2024 AIFYCODE Learning | All Rights Reserved. Made With Love
         </p>
       </div>
     </footer>
+
+    <script>
+      // Menampilkan dan menyembunyikan dropdown
+      function toggleDropdown(dropdownId) {
+        document.getElementById(dropdownId).classList.toggle("show");
+      }
+
+      // Menangani pemilihan dari dropdown
+      function selectModule(moduleName, chapterName) {
+        document.querySelector(
+          ".module-content h3"
+        ).textContent = `Judul Kuis untuk ${moduleName} - ${chapterName}`;
+        document.querySelector(".module-content p").textContent =
+          "Deskripsi untuk " + chapterName + " dari " + moduleName;
+      }
+
+      // Menutup dropdown jika diklik di luar
+      window.onclick = function (event) {
+        if (!event.target.matches(".dropbtn")) {
+          const dropdowns = document.getElementsByClassName("dropdown-content");
+          for (let i = 0; i < dropdowns.length; i++) {
+            const openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains("show")) {
+              openDropdown.classList.remove("show");
+            }
+          }
+        }
+      };
+    </script>
   </body>
 </html>
