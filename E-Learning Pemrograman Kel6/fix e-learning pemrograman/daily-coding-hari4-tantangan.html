@@ -283,19 +283,24 @@
         <div>
           <h3>Tantangan Saat Ini:</h3>
           <div class="challenge day-4">
-            <p>Buat program untuk mengonversi suhu dari Celsius ke Fahrenheit.</p>
+            <p>Deskripsi:
+              Buat program untuk mengonversi panjang dari meter ke kilometer. Dengan bahasa python dan input dari user.
+              </p>
             <textarea
               placeholder="Tulis kode Anda..."
               style="width: 95%; height: 150px"
             >
-            # Meminta input suhu dalam Celcius
-            celsius = float(input("Masukkan suhu dalam Celsius: "))
-              
-            # Mengonversi Celsius ke Fahrenheit
-            fahrenheit = (celsius * 9/5) + 32
-              
-            # Menampilkan hasil konversi
-            print(f"suhu dalam Fahrenheit: {fahrenheit}")
+            # Program konversi panjang dari meter ke kilometer
+            def meter_to_kilometer(meter):
+            kilometer = meter / 1000
+            return kilometer
+
+            # Input dari pengguna
+            meter = float(input("Masukkan panjang dalam meter: "))
+            kilometer = meter_to_kilometer(meter)
+
+            # Output
+            print(f"Panjang dalam kilometer: {kilometer:.3f}")
             </textarea>
             <a style="text-decoration: none">
               <div style="margin-top: 10px">

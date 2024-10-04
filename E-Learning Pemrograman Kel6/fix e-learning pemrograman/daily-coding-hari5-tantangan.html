@@ -281,23 +281,23 @@
         <div>
           <h3>Tantangan Saat Ini:</h3>
           <div class="challenge day-5">
-            <p>Buat program yang menerima daftar bilangan dari pengguna, kemudian mengurutkannya dalam urutan naik.
+            <p>Buat program untuk mengonversi berat dari kilogram ke gram. Dengan bahasa pythondan input dari user.
             </p>
             <textarea
               placeholder="Tulis kode Anda..."
               style="width: 95%; height: 150px"
             >
-            # Meminta Input daftar bilangan dari pengguna
-            bilangan = input("Masukkan daftar bilangan yang dipisahkan dengan spasi: ").split()
-  
-            # Mengonversi input menjadi bilangan bulat 
-            bilangan = [int(x) for x in bilangan]
-  
-            # Mengurutkan bilangan dalam urutan naik
-            bilangan.sort()
-  
-            # Menampilkan bilangan yang sudah diurutkan 
-            print(f"Bilangan yang diurutkan: {bilangan}")
+            # Program konversi berat dari kilogram ke gram
+            def kilogram_to_gram(kilogram):
+                gram = kilogram * 1000
+                return gram
+
+            # Input dari pengguna
+            kilogram = float(input("Masukkan berat dalam kilogram: "))
+            gram = kilogram_to_gram(kilogram)
+
+            # Output
+            print(f"Berat dalam gram: {gram:.0f}")
             </textarea>
             <a style="text-decoration: none">
               <div style="margin-top: 10px">
