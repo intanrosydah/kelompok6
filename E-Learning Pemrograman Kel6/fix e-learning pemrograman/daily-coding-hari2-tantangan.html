@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tantangan Harian - Hari Ke-2</title>
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <style>
+      body {
+        background-color: #092635;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        color: #000;
+      }
+
+      h1 {
+        text-align: center;
+        color: #fff;
+      }
+
+      main {
+        text-align: center;
+        padding: 20px;
+      }
+
+      section {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+      }
+
+      select,
+      textarea,
+      button {
+        padding: 10px;
+        margin-top: 10px;
+      }
+
+      button {
+        background-color: #2a3a5b;
+        color: white;
+        border: none;
+        border-radius: 5px;
+      }
+
+      .reward-container {
+        max-width: 600px;
+        margin: 20px auto;
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .reward-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #ffcb2b;
+        padding: 10px;
+        border-radius: 8px;
+      }
+
+      .tukar-api-button {
+        background-color: #ff5f00;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 15px;
+        margin-left: 8cm; 
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-block; 
+      }
+
+      .tukar-api-button:hover {
+        background-color: #ff4500; 
+      }
+
+      .coin-count {
+        font-size: 24px;
+        font-weight: bold;
+      }
+
+      .reward-section {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 20px;
+      }
+
+      .day-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        padding: 10px;
+        border-radius: 8px;
+        width: 50px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .day-box.selected {
+        border: 2px solid #ff5f00;
+      }
+
+      .day-box.max-reward {
+        background-color: #ffcc00;
+        border: 2px solid #ffc107;
+      }
+
+      .claim-button {
+        background-color: #ff5f00;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        padding: 10px 20px;
+        margin-top: 20px;
+        cursor: pointer;
+      }
+
+      .claim-button:hover {
+        background-color: #ff4500;
+      }
+      
+      .challenge {
+        border: 3px solid #d19a66;
+        margin: 10px 0;
+        padding: 10px;
+        border-radius: 8px;
+      }
+
+      .nav-buttons {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .popup-container {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        justify-content: center;
+        align-items: center;
+      }
+
+      .popup {
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 30px;
+        text-align: center;
+        width: 300px;
+        position: relative;
+      }
+
+      .popup h2 {
+        margin-bottom: 20px;
+        color: #ffc107;
+        font-size: 28px;
+        font-weight: bold;
+      }
+
+      .popup .flames {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .flame-icon {
+        width: 50px;
+        height: 50px;
+        background-image: url('https://img.icons8.com/emoji/48/fire.png');
+        background-size: cover;
+        animation: flameAnimation 1s infinite alternate;
+      }
+
+      @keyframes flameAnimation {
+        0% {
+          transform: scale(1);
+        }
+        100% {
+          transform: scale(1.2);
+        }
+      }
+
+      .popup p {
+        font-size: 22px;
+        margin: 10px 0;
+      }
+
+      .popup button {
+        padding: 10px 20px;
+        background-color: #28a745;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 20px;
+      }
+
+      .popup button:hover {
+        background-color: #218838;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header id="main-header">
+      <div>
+        <img src="images/logo-3.png" alt="Logo" />
+      </div>
+      <nav>
+        <a href="index.html">HOME</a>
+        <a href="progress.html">PROGRESS</a>
+        <a href="daily-coding.html">DAILY CODING</a>
+        <a href="profil.html">PROFIL</a>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Daily Coding</h1>
+
+      <div class="reward-container">
+        <div class="reward-header">
+          <h1>Api Saya</h1>
+          <a href="tukar-api.html" class="tukar-api-button">Tukar Api</a>
+          <span class="coin-count">1</span>
+        </div>
+
+        <div class="reward-section">
+          <div class="day-box ">
+            <span>+1 Api</span>
+            <p>Hari ini</p>
+          </div>
+          <div class="day-box selected">
+            <span>+1 Api</span>
+            <p>Hari 2</p>
+          </div>
+          <div class="day-box">
+            <span>+1 Api</span>
+            <p>Hari 3</p>
+          </div>
+          <div class="day-box">
+            <span>+1 Api</span>
+            <p>Hari 4</p>
+          </div>
+          <div class="day-box">
+            <span>+1 Api</span>
+            <p>Hari 5</p>
+          </div>
+          <div class="day-box">
+            <span>+1 Api</span>
+            <p>Hari 6</p>
+          </div>
+          <div class="day-box">
+            <span>+1 Api</span>
+            <p>Hari 7</p>
+          </div>
+        </div>
+      </div>
+
+      <section>
+        <h2>Tantangan Harian - Hari Ke-2</h2>
+        <p>
+          Tingkatkan kemampuan coding Anda dengan tantangan harian 
+        </p>
+
+        
+
+        <div>
+          <h3>Tantangan Saat Ini:</h3>
+          <div class="challenge day-2">
+            <p>Buat program yang menerima daftar bilangan dari pengguna, kemudian mengurutkannya dalam urutan naik.
+            </p>
+            <textarea
+              placeholder="Tulis kode Anda..."
+              style="width: 95%; height: 150px"
+            >
+            # Meminta Input daftar bilangan dari pengguna
+            bilangan = input("Masukkan daftar bilangan yang dipisahkan dengan spasi: ").split()
+
+            # Mengonversi input menjadi bilangan bulat 
+            bilangan = [int(x) for x in bilangan]
+
+            # Mengurutkan bilangan dalam urutan naik
+            bilangan.sort()
+
+            # Menampilkan bilangan yang sudah diurutkan 
+            print(f"Bilangan yang diurutkan: {bilangan}")
+            </textarea>
+            <a style="text-decoration: none">
+              <div style="margin-top: 10px">
+                <button onclick="showPopup()">Kirim Kode</button>
+              </div>
+            </a>
+            <a href="daily-coding-hari3.html" style="text-decoration: none">
+              <button>Lanjut Hari Berikutnya</button>
+            </a>
+          </div>
+
+          <div style="margin-top: 20px">
+            <p>
+              Selesaikan tantangan dan dapatkan Api. Kumpulkan 100 Api untuk
+              membuka kursus lanjutan!
+            </p>
+          </div>
+
+          <!-- Pop-up -->
+          <div class="popup-container" id="popupContainer">
+            <div class="popup">
+              <h2>Victory!</h2>
+              <div class="flames">
+                <div class="flame-icon"></div>
+              </div>
+              <a href="kode-daily-coding-hari2.html" style="text-decoration: none">
+              <p>Anda telah menyelesaikan tantangan hari ini!</p>
+              <button onclick="closePopup()">Continue</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+     <!-- Footer -->
+     <footer id="main-footer">
+      <div class="footer-content">
+          <div class="social-icons">
+              <a href="#"><img src="images/facebook-icon.png" alt="Facebook" /></a>
+              <a href="#"><img src="images/x-icon.png" alt="Twitter" /></a>
+              <a href="#"><img src="images/linkedin-icon.png" alt="LinkedIn" /></a>
+              <a href="#"><img src="images/instagram-icon.png" alt="Instagram" /></a>
+          </div>
+          <nav class="footer-nav">
+              <a href="#">Home</a>
+              <a href="#">About Us</a>
+              <a href="#">Product</a>
+              <a href="#">Login</a>
+              <a href="#">Contact</a>
+          </nav>
+          <p>
+              &copy; 2024 AIFYCODE Learning | All Rights Reserved. Made With Love
+          </p>
+      </div>
+  </footer>
+
+    <script>
+      function showPopup() {
+        document.getElementById("popupContainer").style.display = "flex";
+      }
+
+      function closePopup() {
+        document.getElementById("popupContainer").style.display = "none";
+      }
+
+      function claimReward() {
+        alert("Selamat! Anda telah mendapatkan 20 koin.");
+      }
+    </script>
+  </body>
+</html>
