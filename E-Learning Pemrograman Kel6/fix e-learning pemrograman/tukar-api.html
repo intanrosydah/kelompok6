@@ -28,11 +28,12 @@
         padding: 0;
         position: fixed;
         top: 0;
-        width: 100%; /* Full width */
+        width: 100%;
         z-index: 1000;
-        background-color: rgba(0, 0, 0, 0.9); /* Hitam dengan transparansi */
+        background-color: rgba(9, 38, 53, 0.5); /* Transparansi */
+        backdrop-filter: blur(10px); /* Efek blur */
         transition: background-color 0.3s ease, transform 0.3s ease;
-        transform-origin: center top; /* Tetap di tengah saat zoom */
+        transform-origin: center top;
       }
 
       /* Navbar menjadi lebih transparan saat di-hover */
@@ -63,7 +64,7 @@
         padding: 20px;
       }
 
-      .social-icons img {
+      .social-icons a img {
         width: 30px;
         margin-right: 10px;
       }
@@ -71,10 +72,10 @@
   </head>
   <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark">
       <div class="container">
-        <a class="navbar-brand" href="#">
-          <img src="images/new-logo.png" alt="Logo" width="150" />
+        <a class="navbar-brand" href="index.html">
+          <img src="images/new-logo.png" alt="Logo" />
         </a>
         <button
           class="navbar-toggler"
@@ -90,10 +91,10 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
+              <a class="nav-link active" href="index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="aboutUs.html">About Us</a>
+              <a class="nav-link" href="#about">About</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="product.html">Product</a>
@@ -176,39 +177,6 @@
         }
       }
     </script>
-
-    <script>
-      const navbar = document.querySelector(".navbar");
-
-      window.addEventListener("scroll", () => {
-        const scrollPos = window.scrollY;
-
-        if (scrollPos > 50) {
-          navbar.classList.add("zoom-out");
-          navbar.classList.remove("zoom-in");
-        } else {
-          navbar.classList.add("zoom-in");
-          navbar.classList.remove("zoom-out");
-        }
-      });
-    </script>
-
-    <script>
-      const navbar = document.querySelector(".navbar");
-
-      window.addEventListener("scroll", () => {
-        const scrollPos = window.scrollY;
-
-        if (scrollPos > 50) {
-          navbar.classList.add("zoom-out");
-          navbar.classList.remove("zoom-in");
-        } else {
-          navbar.classList.add("zoom-in");
-          navbar.classList.remove("zoom-out");
-        }
-      });
-    </script>
-
     <script>
       const navbar = document.querySelector(".navbar");
 
