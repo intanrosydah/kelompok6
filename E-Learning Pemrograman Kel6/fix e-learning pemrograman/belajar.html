@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/footer.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap"
       rel="stylesheet"
@@ -16,23 +19,21 @@
         color: #000;
       }
 
-      .container {
-        max-width: 1200px;
+      /* Responsive container with max-width */
+      .fixed-container {
+        max-width: 1200px; /* Menyesuaikan lebar */
         margin: 20px auto;
-        padding: 20px;
         background-color: #fff;
         border: 1px solid #ddd;
         border-radius: 10px;
+        padding: 20px;
       }
 
       .back-btn {
-        margin-bottom: 20px;
-        padding: 10px 15px;
         background-color: #2a3a5b;
         color: white;
         border: none;
         border-radius: 5px;
-        cursor: pointer;
         transition: background-color 0.3s;
       }
 
@@ -43,36 +44,11 @@
       .module-title {
         font-size: 24px;
         font-weight: bold;
-        margin-top: 20px;
-        margin-bottom: 20px;
-        padding: 10px;
         background-color: #f2f2f2;
         border-radius: 5px;
         text-align: center;
-      }
-
-      .module-container {
-        display: flex;
-      }
-
-      .module-list {
-        flex: 1;
-        padding: 20px;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-        background-color: #f9f9f9;
-        margin-right: 20px;
-      }
-
-      .module-list h4 {
-        text-align: center;
-        color: #2a3a5b;
-      }
-
-      .dropdown {
-        position: relative;
-        display: block;
-        margin-bottom: 15px;
+        padding: 10px;
+        margin-bottom: 20px;
       }
 
       .dropbtn {
@@ -84,6 +60,7 @@
         cursor: pointer;
         width: 100%;
         border-radius: 5px;
+        margin-bottom: 10px;
       }
 
       .dropbtn:hover {
@@ -92,7 +69,6 @@
 
       .dropdown-content {
         display: none;
-        position: absolute;
         background-color: #f1f1f1;
         width: 100%;
         box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
@@ -114,31 +90,12 @@
         display: block;
       }
 
-      .module-content {
-        flex: 3;
-        padding: 20px;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-        background-color: #f9f9f9;
-      }
-
-      .module-content h3 {
-        color: #2a3a5b;
-      }
-
-      .navigation-buttons {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 20px;
-      }
-
       .navigation-buttons button {
-        padding: 10px 15px;
         border: none;
         background-color: #2a3a5b;
         color: white;
         border-radius: 5px;
-        cursor: pointer;
+        padding: 10px;
         transition: background-color 0.3s;
       }
 
@@ -148,10 +105,10 @@
     </style>
   </head>
   <body>
-    <div class="container">
+    <div class="fixed-container">
       <!-- Tombol Kembali ke Koridor Kelas -->
       <button
-        class="back-btn"
+        class="btn back-btn"
         onclick="window.location.href='koridor-dipelajari.html'"
       >
         Koridor Kelas
@@ -159,9 +116,10 @@
 
       <div class="module-title">Belajar Dasar AI</div>
 
-      <div class="module-container">
-        <div class="module-list">
-          <h4>Daftar Modul</h4>
+      <div class="row">
+        <!-- Modul List -->
+        <div class="col-md-4">
+          <h4 class="text-center text-primary">Daftar Modul</h4>
 
           <!-- Dropdown untuk Modul 1 -->
           <div class="dropdown">
@@ -248,58 +206,41 @@
           </div>
         </div>
 
-        <div class="module-content">
-          <h3>Judul Materi Modul</h3>
-          <p>Materi akan ditampilkan di sini.</p>
+        <!-- Modul Konten -->
+        <div class="col-md-8">
+          <div class="border p-3">
+            <h3 class="text-primary">Judul Materi Modul</h3>
+            <p>Materi akan ditampilkan di sini.</p>
+          </div>
         </div>
       </div>
 
-      <!-- Tombol panah ke kiri dan kanan -->
-      <div class="navigation-buttons">
-        <button>← Sebelumnya</button>
-        <button onclick="window.location.href='koridor-diselesaikan.html'">
+      <!-- Tombol Navigasi -->
+      <div class="d-flex justify-content-between mt-4">
+        <button class="btn navigation-buttons">← Sebelumnya</button>
+        <button
+          class="btn navigation-buttons"
+          onclick="window.location.href='koridor-diselesaikan.html'"
+        >
           Selanjutnya →
         </button>
       </div>
     </div>
 
-    <!-- Footer -->
-    <footer id="main-footer">
-      <div class="footer-content">
-        <div class="social-icons">
-          <a href="#"><img src="images/facebook-icon.png" alt="Facebook" /></a>
-          <a href="#"><img src="images/x-icon.png" alt="Twitter" /></a>
-          <a href="#"><img src="images/linkedin-icon.png" alt="LinkedIn" /></a>
-          <a href="#"
-            ><img src="images/instagram-icon.png" alt="Instagram"
-          /></a>
-        </div>
-        <nav class="footer-nav">
-          <a href="index.html">Home</a>
-          <a href="aboutUs.html">About Us</a>
-          <a href="product.html">Product</a>
-          <a href="profil.html">Login</a>
-          <a href="contact.html">Contact</a>
-        </nav>
-        <p>
-          &copy; 2024 AIFYCODE Learning | All Rights Reserved. Made With Love
-        </p>
-      </div>
-    </footer>
-
     <script>
       // Menampilkan dan menyembunyikan dropdown
       function toggleDropdown(dropdownId) {
+        closeAllDropdowns(); // Menutup semua dropdown sebelum membuka yang baru
         document.getElementById(dropdownId).classList.toggle("show");
       }
 
       // Menangani pemilihan dari dropdown
       function selectModule(moduleName, chapterName) {
         document.querySelector(
-          ".module-content h3"
+          ".col-md-8 h3"
         ).innerText = `Judul Materi ${moduleName} - ${chapterName}`;
         document.querySelector(
-          ".module-content p"
+          ".col-md-8 p"
         ).innerText = `Materi ${moduleName} ${chapterName} akan ditampilkan di sini.`;
         closeAllDropdowns(); // Menutup semua dropdown setelah memilih
       }
@@ -319,5 +260,6 @@
         }
       };
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
