@@ -4,145 +4,118 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pembayaran Langganan</title>
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/footer.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-    <style>
-      body {
-        background-color: #092635;
-        margin: 0;
-        font-family: "Montserrat", sans-serif;
-        color: #000;
-      }
-      main {
-        max-width: 600px;
-        background-color: white;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        padding: 20px;
-        margin: 0 auto;
-      }
-      h2 {
-        text-align: center;
-        color: #333;
-      }
-      p {
-        text-align: center;
-        font-size: 18px;
-      }
-      h3,
-      h4 {
-        text-align: center;
-        margin-top: 30px;
-      }
-      .payment-method {
-        margin-bottom: 20px;
-        text-align: center;
-      }
-      .payment-method input {
-        margin-right: 10px;
-      }
-      .payment-method label img {
-        width: 100px; /* Ukuran logo */
-        vertical-align: middle;
-        margin-right: 10px;
-      }
-      .payment-method label {
-        display: inline-flex;
-        align-items: center;
-        margin-right: 20px;
-        font-size: 18px; /* Ukuran font untuk nama bank */
-        color: #333;
-      }
-      .payment-button {
-        display: flex;
-        justify-content: center;
-        margin-top: 40px;
-      }
-      .payment-button button {
-        padding: 10px 50px;
-        font-size: 16px;
-        background-color: #2a3a5b;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-      }
-
-      .button-container {
-        display: flex;
-        justify-content: center;
-        margin-top: 20px;
-        margin-bottom: 20px;
-      }
-
-      button {
-        padding: 10px 20px;
-        background-color: transparent;
-        border: 1px solid white;
-        color: white;
-        cursor: pointer;
-        transition: background-color 0.3s, color 0.3s;
-      }
-
-      button:hover {
-        background-color: white;
-        color: black;
-      }
-    </style>
   </head>
+  <style>
+    body {
+      font-family: "Montserrat", sans-serif;
+      background-color: #092635;
+    }
+  </style>
   <body>
-    <!-- Konten Utama -->
-    <main>
-      <section>
-        <h2>Paket Langganan 1 Bulan</h2>
-        <p>Biaya: <strong>Rp 1.000.000</strong></p>
+    <!-- Paket Langganan dan Biaya -->
+    <div class="container text-center text-white py-5">
+      <h1 class="display-4">Paket Langganan 1 Bulan</h1>
+      <p class="fs-3">Biaya: <strong>Rp 1.000.000</strong></p>
+    </div>
 
+    <!-- Konten Utama -->
+    <main class="container mb-3">
+      <section
+        class="text-center bg-light rounded-3 shadow-lg p-4 mx-auto"
+        style="max-width: 800px"
+      >
         <!-- Metode Pembayaran -->
-        <div class="payment-method">
-          <h3>Metode Pembayaran</h3>
-          <div>
-            <input type="radio" id="va_bca" name="payment_method" />
-            <label for="va_bca">
-              <img src="images/logobca.png" alt="BCA Logo" /> </label
-            ><br /><br />
-            <input type="radio" id="va_bni" name="payment_method" />
-            <label for="va_bni">
-              <img src="images/logobni.png" alt="BNI Logo" /> </label
-            ><br /><br />
-            <input type="radio" id="va_mandiri" name="payment_method" />
-            <label for="va_mandiri">
-              <img src="images/logomandiri.png" alt="Mandiri Logo" />
-            </label>
+        <div class="payment-method mb-4">
+          <h3 class="my-4">Metode Pembayaran</h3>
+          <div class="d-flex flex-column align-items-center">
+            <div class="form-check mb-2">
+              <input
+                class="form-check-input"
+                type="radio"
+                id="va_bca"
+                name="payment_method"
+              />
+              <label class="form-check-label" for="va_bca">
+                <img
+                  src="images/logobca.png"
+                  alt="BCA Logo"
+                  class="img-fluid"
+                  style="width: 100px; transition: transform 0.2s"
+                  onmouseover="this.style.transform='scale(1.1)'"
+                  onmouseout="this.style.transform='scale(1)'"
+                />
+              </label>
+            </div>
+            <div class="form-check mb-2">
+              <input
+                class="form-check-input"
+                type="radio"
+                id="va_bni"
+                name="payment_method"
+              />
+              <label class="form-check-label" for="va_bni">
+                <img
+                  src="images/logobni.png"
+                  alt="BNI Logo"
+                  class="img-fluid"
+                  style="width: 100px; transition: transform 0.2s"
+                  onmouseover="this.style.transform='scale(1.1)'"
+                  onmouseout="this.style.transform='scale(1)'"
+                />
+              </label>
+            </div>
+            <div class="form-check mb-2">
+              <input
+                class="form-check-input"
+                type="radio"
+                id="va_mandiri"
+                name="payment_method"
+              />
+              <label class="form-check-label" for="va_mandiri">
+                <img
+                  src="images/logomandiri.png"
+                  alt="Mandiri Logo"
+                  class="img-fluid"
+                  style="width: 100px; transition: transform 0.2s"
+                  onmouseover="this.style.transform='scale(1.1)'"
+                  onmouseout="this.style.transform='scale(1)'"
+                />
+              </label>
+            </div>
           </div>
         </div>
 
         <!-- Tombol Pembayaran -->
-        <div class="payment-button">
-          <a href="bayar-sekarang.html" style="text-decoration: none">
-            <button>Bayar Sekarang</button>
-          </a>
+        <div class="payment-button my-4">
+          <a href="bayar-sekarang.html" class="btn btn-dark btn-md"
+            >Bayar Sekarang</a
+          >
         </div>
 
         <!-- Instruksi Pembayaran -->
-        <div>
-          <h4>Instruksi Pembayaran</h4>
-          <h4>
+        <div
+          class="shadow bg-light text-dark rounded p-3 my-5 mx-auto"
+          style="max-width: 400px"
+        >
+          <h5>Instruksi Pembayaran</h5>
+          <p>
             Setelah memilih metode pembayaran, silakan transfer ke Virtual
             Account yang tersedia sesuai dengan pilihan Anda. Pembayaran akan
             diproses secara otomatis setelah transfer berhasil dilakukan.
-          </h4>
+          </p>
         </div>
       </section>
     </main>
 
     <!-- Tombol Kembali -->
-    <div class="button-container">
-      <a href="bayar1.html">
-        <button>Kembali</button>
-      </a>
+    <div class="container text-center my-5">
+      <a href="bayar1.html" class="btn btn-outline-light">Kembali</a>
     </div>
 
     <!-- Footer -->
@@ -168,5 +141,6 @@
         </p>
       </div>
     </footer>
+    <script src="bootstrap-5.0.2-dist/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

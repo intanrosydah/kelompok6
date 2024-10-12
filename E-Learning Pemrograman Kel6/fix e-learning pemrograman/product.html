@@ -4,13 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Product Page</title>
+    <link
+      rel="stylesheet"
+      href="bootstrap-5.0.2-dist/css/bootstrap.min.css"
+    />
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/footer.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-
     <style>
       /* Body background image */
       body {
@@ -21,63 +24,6 @@
         margin: 0;
         font-family: "Montserrat", sans-serif;
         color: #000;
-      }
-
-      /* Main Content Styles */
-      main {
-        padding: 20px;
-      }
-
-      .product-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        padding: 20px;
-        /* background: rgba(9, 38, 53, 0.8); */
-        min-height: calc(
-          100vh - 160px
-        ); /* Adjust based on footer/header height */
-        border-radius: 10px;
-      }
-
-      .course-package {
-        background-color: #fff;
-        padding: 20px;
-        text-align: center;
-        margin-bottom: 20px;
-        width: 700px;
-        height: 300px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        border-radius: 8px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      }
-
-      .course-package h2 {
-        margin-bottom: 10px;
-        color: #092635; /* Supaya konsisten dengan tema */
-      }
-
-      .course-package button {
-        padding: 10px 20px;
-        background-color: #092635;
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.3s;
-      }
-
-      .course-package button:hover {
-        background-color: #064859;
-      }
-
-      .course-package .price-discount {
-        text-decoration: line-through;
-        color: gray;
       }
     </style>
   </head>
@@ -100,27 +46,44 @@
       <div class="product-container">
         <!-- Paket Kursus 1 -->
         <div class="course-package">
+          <div class="grid">
+            <body class="bg-dark text-white">
+              <div class="container text-center py-5">
+                <div class="bg-white text-dark rounded shadow p-4">
           <h2>PAKET KURSUS ONLINE 1</h2>
           <p>Langganan 1 bulan</p>
           <p>Rp 1,000,000</p>
-          <button onclick="window.location.href='bayar1.html'">Pilih</button>
+          <button type="button" class="btn btn-dark">Pilih</button>
         </div>
 
         <!-- Paket Kursus 2 -->
         <div class="course-package">
+          <div class="course-package">
+            <div class="grid">
+              <body class="bg-dark text-white">
+                <div class="container text-center py-5">
+                  <div class="bg-white text-dark rounded shadow p-4">
           <h2>PAKET KURSUS ONLINE 2</h2>
           <p>Langganan 3 bulan</p>
           <p>Rp 3,000,000</p>
-          <button onclick="window.location.href='bayar2.html'">Pilih</button>
+          <button type="button" class="btn btn-dark">Pilih</button>
         </div>
 
         <!-- Paket Kursus 3 -->
         <div class="course-package">
+          <div class="course-package">
+            <div class="grid">
+              <body class="bg-dark text-white">
+                <div class="container text-center py-5">
+                  <div class="bg-white text-dark rounded shadow p-4">
           <h2>PAKET KURSUS ONLINE 3</h2>
           <p>Langganan 6 bulan</p>
-          <p><span class="price-discount">Rp 6,000,000</span></p>
-          <p>Rp 5,100,000</p>
-          <button onclick="window.location.href='bayar3.html'">Pilih</button>
+          <div class="container text-center">
+            <p>
+                <del class="text-muted">Rp 6,000,000</del> 
+                <span class="font-weight-bold">Rp 5,100,000</span>
+            </p>
+          <button type="button" class="btn btn-dark">Pilih</button>
         </div>
       </div>
     </main>

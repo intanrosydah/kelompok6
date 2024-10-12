@@ -4,88 +4,39 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pembayaran</title>
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/footer.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-    <style>
-      body {
-        background-color: #092635;
-        margin: 0;
-        font-family: "Montserrat", sans-serif;
-        color: #000;
-      }
-
-      .container {
-        padding: 70px;
-        text-align: center;
-      }
-
-      .payment-box {
-        background-color: #fff;
-        border-radius: 5px;
-        padding: 20px;
-        margin: 20px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      }
-
-      .title {
-        font-size: 20px;
-        font-weight: bold;
-      }
-
-      .row {
-        display: inline-block;
-        width: 45%;
-        text-align: left;
-        font-size: 18px;
-        margin: 10px 0;
-      }
-
-      .right {
-        text-align: right;
-      }
-
-      hr {
-        border: none;
-        border-top: 3px solid black;
-        margin: 20px auto;
-        width: 90%;
-      }
-
-      .button-container {
-        display: flex;
-        justify-content: space-between; /* Mengatur jarak antara kedua tombol */
-        margin-top: 20px;
-      }
-
-      button {
-        padding: 10px 20px;
-        background-color: transparent;
-        border: 1px solid black;
-        cursor: pointer;
-        transition: background-color 0.3s, color 0.3s;
-      }
-
-      button:hover {
-        background-color: black;
-        color: white;
-      }
-    </style>
   </head>
-  <body>
-    <div class="container">
-      <div class="payment-box">
-        <div class="title">Pembayaran untuk Paket Kursus Online 2</div>
-        <div class="row">Harga 3 Bulan</div>
-        <div class="row right">Rp 3,000,000</div>
-        <hr />
-        <div class="row">Jumlah Tagihan</div>
-        <div class="row right">Rp 3,000,000</div>
-        <div class="button-container">
-          <button onclick="window.location.href='product.html'">Kembali</button>
-          <button onclick="window.location.href='metode-pembayaran.html'">
+  <style>
+    body {
+      font-family: "Montserrat", sans-serif;
+      background-color: #092635;
+    }
+  </style>
+  <body class="text-white">
+    <div class="container text-center py-5">
+      <div class="bg-white text-dark rounded shadow p-4">
+        <h2 class="mb-4">Pembayaran untuk Paket Kursus Online 2</h2>
+        <div class="row justify-content-center">
+          <div class="col-md-6 text-start">Harga 3 Bulan</div>
+          <div class="col-md-6 text-end">Rp 3,000,000</div>
+        </div>
+        <hr class="my-4" />
+        <div class="row justify-content-center">
+          <div class="col-md-6 text-start">Jumlah Tagihan</div>
+          <div class="col-md-6 text-end">Rp 3,000,000</div>
+        </div>
+        <div class="d-flex justify-content-between mt-4">
+          <a href="product.html" class="btn btn-outline-dark">Kembali</a>
+          <button
+            type="button"
+            class="btn btn-dark"
+            onclick="window.location.href='metode-pembayaran.html'"
+          >
             Bayar
           </button>
         </div>
@@ -115,5 +66,7 @@
         </p>
       </div>
     </footer>
+
+    <script src="bootstrap-5.0.2-dist/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

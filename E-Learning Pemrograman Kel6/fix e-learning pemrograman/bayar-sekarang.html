@@ -4,138 +4,58 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Detail Pembayaran</title>
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/footer.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-    <style>
-      body {
-        background-color: #092635;
-        margin: 0;
-        font-family: "Montserrat", sans-serif;
-        color: #000;
-      }
-
-      main {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-      }
-
-      section {
-        max-width: 1200px; /* Meningkatkan lebar maksimal */
-        background-color: white;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        padding: 40px; /* Meningkatkan padding untuk jarak lebih baik */
-        margin: 20px; /* Mengurangi margin */
-      }
-
-      h2 {
-        text-align: center;
-        color: #333;
-        margin-top: 20px;
-      }
-
-      p {
-        text-align: center;
-        font-size: 18px;
-        margin-bottom: 30px;
-      }
-
-      .va-details {
-        background-color: rgb(238, 238, 238);
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        margin: 20px 0; /* Tambahkan margin untuk jarak */
-      }
-
-      .va-details h3 {
-        text-align: center;
-        margin: 20px 0 10px 0;
-      }
-
-      .va-details p {
-        text-align: center;
-        font-size: 22px;
-        font-weight: bold;
-        color: #333;
-      }
-
-      .va-details .total-payment {
-        text-align: center;
-        font-size: 16px;
-      }
-
-      /* Styling for the payment instructions */
-      .payment-instructions {
-        margin-top: 40px;
-      }
-
-      .payment-instructions h4 {
-        text-align: left;
-        font-size: 16px;
-        color: #2a3a5b;
-        margin-bottom: 10px;
-      }
-
-      .payment-instructions ul {
-        list-style-type: none;
-        padding-left: 0;
-      }
-
-      .payment-instructions li {
-        text-align: left;
-        font-size: 14px;
-        color: #555;
-        margin-bottom: 5px;
-      }
-
-      .complete-payment {
-        display: flex;
-        justify-content: center;
-        margin-top: 40px;
-      }
-
-      .complete-payment button {
-        padding: 10px 50px;
-        font-size: 16px;
-        background-color: #2a3a5b;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-      }
-
-      .complete-payment button:hover {
-        background-color: #1d2b49;
-      }
-    </style>
   </head>
+  <style>
+    body {
+      font-family: "Montserrat", sans-serif;
+      background-color: #092635;
+    }
+  </style>
   <body>
+    <div class="container text-center text-white py-5">
+      <h1 class="display-4">Pembayaran Berhasil Dikonfirmasi</h1>
+      <p class="fs-5 mt-3">
+        Anda telah memilih metode pembayaran melalui Virtual Account.
+      </p>
+      <p class="fs-5">
+        Silahkan transfer ke nomor Virtual Account di bawah ini:
+      </p>
+    </div>
     <!-- Konten Utama -->
-    <main>
-      <section>
-        <h2>Pembayaran Berhasil Dikonfirmasi</h2>
-        <p>Anda telah memilih metode pembayaran melalui Virtual Account.</p>
-        <p>Silakan transfer ke nomor Virtual Account di bawah ini:</p>
-
+    <main class="container mb-5">
+      <section
+        class="bg-white rounded-3 shadow-lg p-4 mx-auto"
+        style="max-width: 800px"
+      >
         <!-- Detail Virtual Account -->
-        <div class="va-details">
-          <h3>Virtual Account Number</h3>
-          <p>1234 5678 9101 1121</p>
-          <p class="total-payment">
+        <div
+          class="shadow bg-light text-dark rounded p-3 my-5 mx-auto"
+          style="max-width: 400px"
+        >
+          <h3 class="text-center">Virtual Account Number</h3>
+          <p class="text-center fs-4 fw-bold">1234 5678 9101 1121</p>
+          <p class="text-center fs-5">
             Total Pembayaran: <strong>Rp 1.000.000</strong>
           </p>
         </div>
 
+        <!-- Tombol untuk Menyelesaikan -->
+        <div class="text-center mt-4 mb-4">
+          <a href="pembayaran-selesai.html" class="btn btn-dark btn-md"
+            >Selesaikan Pembayaran</a
+          >
+        </div>
+
         <!-- Instruksi Pembayaran -->
-        <div class="payment-instructions">
-          <h4>Instruksi Pembayaran:</h4>
-          <ul>
+        <div>
+          <h5 class="text-left mt-5">Instruksi Pembayaran:</h5>
+          <ul class="list-unstyled">
             <li>
               1. Buka aplikasi mobile banking, internet banking, atau ATM.
             </li>
@@ -146,13 +66,6 @@
             </li>
             <li>5. Ikuti instruksi hingga pembayaran berhasil.</li>
           </ul>
-        </div>
-
-        <!-- Tombol untuk Menyelesaikan -->
-        <div class="complete-payment">
-          <a href="pembayaran-selesai.html" style="text-decoration: none">
-            <button>Selesaikan Pembayaran</button>
-          </a>
         </div>
       </section>
     </main>
@@ -180,5 +93,7 @@
         </p>
       </div>
     </footer>
+
+    <script src="bootstrap-5.0.2-dist/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

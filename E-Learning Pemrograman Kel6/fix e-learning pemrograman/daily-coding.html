@@ -4,70 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Daily Coding</title>
+    <link
+      rel="stylesheet"
+      href="bootstrap-5.0.2-dist/css/bootstrap.min.css"
+    />
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/footer.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-    <style>
-      body {
-        background-color: #092635;
-        margin: 0;
-        font-family: "Montserrat", sans-serif;
-        color: #000;
-      }
-
-      h1 {
-        text-align: center;
-        font-size: 50px;
-        color: #fff;
-      }
-
-      /* Main Content */
-      main {
-        text-align: center;
-        padding: 20px;
-      }
-
-      section {
-        max-width: 800px;
-        margin: 0 auto;
-        margin-bottom: 50px;
-        background-color: white;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        padding: 20px;
-      }
-
-      select,
-      textarea,
-      button {
-        padding: 20px;
-        margin-top: 20px;
-      }
-
-      button {
-        background-color: #2a3a5b;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-      }
-
-      #startButton {
-        padding: 10px 20px;
-        font-size: 16px;
-        background-color: #2a3a5b;
-        color: white;
-        border: none;
-        border-radius: 5px;
-      }
-      #startButton:hover {
-        background-color: #1f263b;
-      }
-    </style>
   </head>
+  <style>
+    body {
+      font-family: "Montserrat", sans-serif;
+      background-color: #092635;
+    }
+  </style>
   <body>
     <!-- Header -->
     <header id="main-header">
@@ -84,9 +37,13 @@
 
     <!-- Main Content -->
     <main>
-      <h1>Daily Coding</h1>
+      <h1 class="text-center display-4">Daily Coding</h1>
+      <div class="text-center">
       <section>
-        <h2>APA ITU DAILY CODING ?</h2>
+        <body class="text-white">
+          <div class="container text-center py-5">
+            <div class="bg-white text-dark rounded shadow p-4 mx-auto" style="max-width: 800px;">
+        <h3>APA ITU DAILY CODING ?</h3>
         <p>
           Daily Coding adalah rutinitas latihan pemrograman harian yang
           bertujuan untuk meningkatkan keterampilan coding dan pemecahan
@@ -98,7 +55,7 @@
           berbeda. Dengan konsistensi, daily coding membantu pengembangan
           keahlian teknis dan meningkatkan efisiensi dalam menulis kode.
         </p>
-        <h2>BAGAIMANA CARA KERJA DAILY CODING ?</h2>
+        <h3>BAGAIMANA CARA KERJA DAILY CODING ?</h3>
         <p>
           1. Klik tombol mulai<br />
           2. Selesaikan tantangan harian, setiap menyelesaikan tantangan dapat 1
@@ -106,6 +63,7 @@
           3. Kumpulkan api untuk ditukarkan Paket Kursus Online
         </p>
         <button
+          class="btn btn-dark btn-md"
           id="startButton"
           onclick="window.location.href='daily-coding-hari1.html'"
         >

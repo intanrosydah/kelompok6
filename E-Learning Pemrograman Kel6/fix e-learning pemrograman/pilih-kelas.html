@@ -4,126 +4,184 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pilih Kelas</title>
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/footer.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-    <style>
-      body {
-        background-color: #092635;
-        margin: 0;
-        font-family: "Montserrat", sans-serif;
-        color: #000;
-      }
-
-      main {
-        max-width: 600px;
-        background-color: white;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        padding: 20px;
-        margin: 0 auto;
-        margin-top: 20px;
-        margin-bottom: 20px;
-      }
-
-      h2 {
-        text-align: center;
-        color: #333;
-      }
-
-      p {
-        text-align: center;
-        font-size: 18px;
-      }
-
-      .class-selection {
-        background-color: rgb(223, 223, 223);
-        padding: 20px;
-        border-radius: 10px;
-        max-width: 500px;
-        margin: 0 auto;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      }
-
-      .class-selection h3 {
-        margin-bottom: 20px;
-        text-align: center;
-        font-size: 18px;
-      }
-
-      .class-selection .class-item {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 10px;
-      }
-
-      input[type="checkbox"] {
-        transform: scale(0.8); /* Ukuran checkbox diperkecil */
-      }
-
-      .submit-button {
-        display: flex;
-        justify-content: center;
-        margin-top: 40px;
-      }
-
-      .submit-button button {
-        padding: 10px 50px;
-        font-size: 16px;
-        background-color: #2a3a5b;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-      }
-
-      .submit-button button:hover {
-        background-color: #1c2237;
-      }
-    </style>
   </head>
+  <style>
+    body {
+      font-family: "Montserrat", sans-serif;
+      background-color: #092635;
+    }
+  </style>
   <body>
+    <div class="container text-center text-white py-5">
+      <h1 class="display-4">Pilih Kelas</h1>
+      <p class="fs-5 mt-3">
+        Silakan pilih maksimal <strong>3 Kelas</strong> dari daftar berikut.
+      </p>
+    </div>
     <!-- Konten Utama -->
-    <main>
-      <section>
-        <h2>Pilih Kelas</h2>
-        <p>
-          Silakan pilih maksimal <strong>3 Kelas</strong> dari daftar berikut.
-        </p>
-
+    <main class="container mb-4">
+      <section
+        class="bg-white rounded-3 shadow p-4 mx-auto"
+        style="max-width: 600px"
+      >
+        <h2 class="text-center mt-3 mb-3">Daftar Kelas</h2>
         <!-- Pilihan Kelas -->
-        <div class="class-selection">
-          <h3>Daftar Kelas</h3>
-          <div class="class-item">
-            <span>Belajar Dasar AI</span>
-            <input type="checkbox" class="pilihan" />
+        <div class="bg-light shadow rounded-3 p-3 mx-auto">
+          <div class="form-check">
+            <input
+              type="checkbox"
+              class="form-check-input pilihan"
+              id="kelas1"
+            />
+            <label class="form-check-label" for="kelas1"
+              >Belajar Dasar AI</label
+            >
           </div>
-          <div class="class-item">
-            <span>Belajar Dasar Machine Learning</span>
-            <input type="checkbox" class="pilihan" />
+          <div class="form-check">
+            <input
+              type="checkbox"
+              class="form-check-input pilihan"
+              id="kelas2"
+            />
+            <label class="form-check-label" for="kelas2"
+              >Belajar Dasar Machine Learning</label
+            >
           </div>
-          <div class="class-item">
-            <span>Belajar Dasar Pemrograman</span>
-            <input type="checkbox" class="pilihan" />
+          <div class="form-check">
+            <input
+              type="checkbox"
+              class="form-check-input pilihan"
+              id="kelas3"
+            />
+            <label class="form-check-label" for="kelas3"
+              >Belajar Dasar Pemrograman</label
+            >
           </div>
-          <div class="class-item">
-            <span>Belajar Dasar Pemrograman Web</span>
-            <input type="checkbox" class="pilihan" />
+          <div class="form-check">
+            <input
+              type="checkbox"
+              class="form-check-input pilihan"
+              id="kelas4"
+            />
+            <label class="form-check-label" for="kelas4"
+              >Belajar Dasar Pemrograman Web</label
+            >
           </div>
-          <div class="class-item">
-            <span>Belajar Dasar Pemrograman Game</span>
-            <input type="checkbox" class="pilihan" />
+          <div class="form-check">
+            <input
+              type="checkbox"
+              class="form-check-input pilihan"
+              id="kelas5"
+            />
+            <label class="form-check-label" for="kelas5"
+              >Belajar Dasar Pemrograman Game</label
+            >
+          </div>
+          <div class="form-check">
+            <input
+              type="checkbox"
+              class="form-check-input pilihan"
+              id="kelas6"
+            />
+            <label class="form-check-label" for="kelas6"
+              >Belajar Bahasa Python</label
+            >
+          </div>
+          <div class="form-check">
+            <input
+              type="checkbox"
+              class="form-check-input pilihan"
+              id="kelas7"
+            />
+            <label class="form-check-label" for="kelas7"
+              >Belajar Bahasa CSS</label
+            >
+          </div>
+          <div class="form-check">
+            <input
+              type="checkbox"
+              class="form-check-input pilihan"
+              id="kelas8"
+            />
+            <label class="form-check-label" for="kelas8"
+              >Belajar Bahasa Java</label
+            >
+          </div>
+          <div class="form-check mb-5">
+            <input
+              type="checkbox"
+              class="form-check-input pilihan"
+              id="kelas9"
+            />
+            <label class="form-check-label" for="kelas9"
+              >Belajar Bahasa C++</label
+            >
           </div>
         </div>
 
         <!-- Tombol Submit -->
-        <div class="submit-button">
-          <button onclick="submitKelas()">Ambil Kelas</button>
+        <div class="mt-5 mb-4 d-flex justify-content-center mt-4">
+          <button
+            class="btn btn-dark"
+            data-bs-toggle="modal"
+            data-bs-target="#confirmModal"
+            onclick="prepareSubmission()"
+          >
+            Ambil Kelas
+          </button>
         </div>
       </section>
     </main>
+
+    <!-- Modal Konfirmasi -->
+    <div
+      class="modal fade"
+      id="confirmModal"
+      tabindex="-1"
+      aria-labelledby="confirmModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="confirmModalLabel">
+              Konfirmasi Pengambilan Kelas
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body" id="modalBody">
+            <!-- Pesan akan ditampilkan di sini -->
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Batal
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              onclick="submitKelas()"
+            >
+              Konfirmasi
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Footer -->
     <footer id="main-footer">
@@ -149,16 +207,28 @@
       </div>
     </footer>
 
+    <script src="bootstrap-5.0.2-dist/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
     <script>
+      function prepareSubmission() {
+        const checkboxes = document.querySelectorAll(".pilihan:checked");
+        let message = "";
+
+        if (checkboxes.length > 3) {
+          message = "Anda hanya boleh memilih maksimal 3 Kelas.";
+        } else if (checkboxes.length < 3) {
+          message = "Silakan pilih 3 Kelas.";
+        } else {
+          message = "Kelas berhasil diambil!";
+        }
+
+        // Tampilkan pesan di modal
+        document.getElementById("modalBody").innerText = message;
+      }
+
       function submitKelas() {
         const checkboxes = document.querySelectorAll(".pilihan:checked");
-        if (checkboxes.length > 3) {
-          alert("Anda hanya boleh memilih maksimal 3 Kelas.");
-        } else if (checkboxes.length < 3) {
-          alert("Silakan pilih 3 Kelas.");
-        } else {
-          alert("Kelas berhasil diambil!");
-          window.location.href = "progress.html"; // Mengarahkan ke halaman progress setelah validasi
+        if (checkboxes.length === 3) {
+          window.location.href = "progress.html"; // Mengarahkan ke halaman progress setelah konfirmasi
         }
       }
     </script>
