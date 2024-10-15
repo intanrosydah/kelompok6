@@ -107,6 +107,22 @@
         background-color: #092635 !important;
         color: white !important;
       }
+      .logo-hover {
+        transition: transform 0.3s ease;
+      }
+
+      .logo-hover:hover {
+        transform: scale(1.2);
+      }
+      section.py-5.text-center {
+        padding: 50px 0;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      section.py-5.text-center p.lead {
+        margin: 20px 0;
+      }
     </style>
   </head>
   <body>
@@ -277,32 +293,38 @@
         <h3 class="mt-5">Perusahaan yang Bekerja Sama</h3>
         <div class="d-flex justify-content-around align-items-center mt-3">
           <div class="col-md-3 text-center">
-            <img
-              src="images/Logo-Linkedin.png"
-              alt="Logo Perusahaan 1"
-              class="img-fluid mb-3"
-            />
+            <a href="https://www.linkedin.com/" target="_blank">
+              <img
+                src="images/Logo-Linkedin.png"
+                alt="Logo LinkedIn"
+                class="img-fluid mb-3 logo-hover"
+              />
+            </a>
           </div>
           <div class="col-md-3 text-center">
-            <img
-              src="images/logo-bumn.png"
-              alt="Logo Perusahaan 2"
-              class="img-fluid mb-3"
-            />
+            <a href="https://www.bumn.go.id/" target="_blank">
+              <img
+                src="images/logo-bumn.png"
+                alt="Logo BUMN"
+                class="img-fluid mb-3 logo-hover"
+              />
+            </a>
           </div>
           <div class="col-md-3 text-center">
-            <img
-              src="images/logo-google.png"
-              alt="Logo Perusahaan 3"
-              class="img-fluid mb-3"
-            />
+            <a href="https://about.google/intl/ALL_id/" target="_blank">
+              <img
+                src="images/logo-google.png"
+                alt="Logo Google"
+                class="img-fluid mb-3 logo-hover"
+              />
+            </a>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Team Section -->
-    <section class="py-5 bg-light text-dark" style="margin-top: 100px">
+    <section class="py-5 bg-light text-dark">
       <div class="container">
         <h2 class="text-center mb-5">Tim Kami</h2>
         <div class="row">
@@ -376,7 +398,7 @@
               aria-label="Close"
             ></button>
           </div>
-          <div class="modal-body">
+          <div class="modal-body text-center">
             <img
               src="images/gambar_orang.jpg"
               alt="Nama Orang 1"
@@ -411,7 +433,7 @@
               aria-label="Close"
             ></button>
           </div>
-          <div class="modal-body">
+          <div class="modal-body text-center">
             <img
               src="images/gambar_orang.jpg"
               alt="Nama Orang 2"
@@ -443,7 +465,7 @@
               aria-label="Close"
             ></button>
           </div>
-          <div class="modal-body">
+          <div class="modal-body text-center">
             <img
               src="images/gambar_orang.jpg"
               alt="Nama Orang "
@@ -456,7 +478,7 @@
       </div>
     </div>
 
-    <!-- Team Modal 2 -->
+    <!-- Team Modal 4 -->
     <div
       class="modal fade"
       id="teamModal4"
@@ -475,7 +497,7 @@
               aria-label="Close"
             ></button>
           </div>
-          <div class="modal-body">
+          <div class="modal-body text-center">
             <img
               src="images/gambar_orang.jpg"
               alt="Nama Orang 4"
