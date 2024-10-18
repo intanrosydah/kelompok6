@@ -28,12 +28,11 @@
         padding: 0;
         position: fixed;
         top: 0;
-        width: 100%;
+        width: 100%; /* Full width */
         z-index: 1000;
-        background-color: rgba(9, 38, 53, 0.5); /* Transparansi */
-        backdrop-filter: blur(10px); /* Efek blur */
+        background-color: rgba(0, 0, 0, 0.9); /* Hitam dengan transparansi */
         transition: background-color 0.3s ease, transform 0.3s ease;
-        transform-origin: center top;
+        transform-origin: center top; /* Tetap di tengah saat zoom */
       }
 
       /* Navbar menjadi lebih transparan saat di-hover */
@@ -64,7 +63,7 @@
         padding: 20px;
       }
 
-      .social-icons a img {
+      .social-icons img {
         width: 30px;
         margin-right: 10px;
       }
@@ -72,10 +71,10 @@
   </head>
   <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
-        <a class="navbar-brand" href="index.html">
-          <img src="images/new-logo.png" alt="Logo" />
+        <a class="navbar-brand" href="#">
+          <img src="images/new-logo.png" alt="Logo" width="150" />
         </a>
         <button
           class="navbar-toggler"
@@ -91,10 +90,10 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link active" href="index.html">Home</a>
+              <a class="nav-link" href="index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#about">About</a>
+              <a class="nav-link" href="aboutUs.html">About Us</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="product.html">Product</a>
@@ -115,7 +114,10 @@
             <h2>PAKET KURSUS ONLINE 1</h2>
             <p>Langganan 1 bulan</p>
             <p>Penukaran 100 API</p>
-            <button class="btn btn-dark" onclick="handleExchange(100)">
+            <button
+              class="btn btn-dark"
+              onclick="handleExchange(100)"
+            >
               Tukar
             </button>
           </div>
@@ -124,7 +126,10 @@
             <h2>PAKET KURSUS ONLINE 2</h2>
             <p>Langganan 3 bulan</p>
             <p>Penukaran 150 API</p>
-            <button class="btn btn-dark" onclick="handleExchange(150)">
+            <button
+              class="btn btn-dark"
+              onclick="handleExchange(150)"
+            >
               Tukar
             </button>
           </div>
@@ -133,7 +138,10 @@
             <h2>PAKET KURSUS ONLINE 3</h2>
             <p>Langganan 6 bulan</p>
             <p>Penukaran 200 API</p>
-            <button class="btn btn-dark" onclick="handleExchange(200)">
+            <button
+              class="btn btn-dark"
+              onclick="handleExchange(200)"
+            >
               Tukar
             </button>
           </div>
@@ -148,15 +156,13 @@
           <a href="#"><img src="images/facebook-icon.png" alt="Facebook" /></a>
           <a href="#"><img src="images/x-icon.png" alt="Twitter" /></a>
           <a href="#"><img src="images/linkedin-icon.png" alt="LinkedIn" /></a>
-          <a href="#"
-            ><img src="images/instagram-icon.png" alt="Instagram"
-          /></a>
+          <a href="#"><img src="images/instagram-icon.png" alt="Instagram" /></a>
         </div>
-        <nav class="footer mt-3">
-          <a href="#">Home</a>
-          <a href="#">About Us</a>
-          <a href="#">Product</a>
-          <a href="#">Login</a>
+        <nav>
+          <a href="index.html" class="me-3 text-decoration-none">Home</a>
+          <a href="aboutUs.html" class="me-3 text-decoration-none">About Us</a>
+          <a href="product.html" class="me-3 text-decoration-none">Product</a>
+          <a href="profil.html" class="text-decoration-none">Login</a>
         </nav>
         <p class="mt-3">
           &copy; 2024 AIFYCODE Learning | All Rights Reserved. Made With Love
@@ -177,6 +183,7 @@
         }
       }
     </script>
+
     <script>
       const navbar = document.querySelector(".navbar");
 
