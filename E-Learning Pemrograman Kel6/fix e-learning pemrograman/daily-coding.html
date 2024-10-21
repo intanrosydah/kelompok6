@@ -19,43 +19,45 @@
 
    <style>
      body {
-       font-family: "Montserrat", sans-serif;
-       background-color: #092635;
-       color: white;
-     }
+        font-family: "Montserrat", sans-serif;
+        background-color: #092635;
+        color: white;
+      }
 
-     .navbar {
-       padding: 0;
-       position: fixed;
-       top: 0;
-       width: 100%; /* Full width */
-       z-index: 1000;
-       background-color: rgba(0, 0, 0, 0.9); /* Hitam dengan transparansi */
-       transition: background-color 0.3s ease, transform 0.3s ease;
-       transform-origin: center top; /* Tetap di tengah saat zoom */
-     }
+      .navbar {
+        padding: 0;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        background-color: rgba(9, 38, 53, 0.5); /* Transparansi */
+        backdrop-filter: blur(10px); /* Efek blur */
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        transform-origin: center top;
+      }
 
-     /* Navbar menjadi lebih transparan saat di-hover */
-     .navbar:hover {
-       background-color: rgba(0, 0, 0, 0.5);
-     }
+      /* Navbar menjadi lebih transparan saat di-hover */
+      .navbar:hover {
+        background-color: rgba(0, 0, 0, 0.5);
+      }
 
-     /* Efek zoom in dan zoom out */
-     .navbar.zoom-in {
-       transform: scale(1.05);
-     }
+      /* Efek zoom in dan zoom out */
+      .navbar.zoom-in {
+        transform: scale(1.05);
+      }
 
-     .navbar.zoom-out {
-       transform: scale(1) translateY(-10px); /* Tetap full-width dan turun sedikit */
-     }
+      .navbar.zoom-out {
+        transform: scale(1) translateY(-10px); /* Tetap full-width dan turun sedikit */
+      }
 
-     .navbar-brand img {
-       max-width: 200px;
-     }
+      .navbar-brand img {
+        max-width: 200px;
+      }
 
-     .navbar-nav .nav-link {
-       padding: 8px 15px;
-     }
+      .navbar-nav .nav-link {
+        padding: 8px 15px;
+      }
+
 
      footer {
        background-color: #092635;
@@ -72,7 +74,7 @@
  <body>
 
    <!-- Navbar -->
-   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+   <nav class="navbar navbar-expand-lg navbar-dark ">
      <div class="container">
        <a class="navbar-brand" href="index.html">
          <img src="images/new-logo.png" alt="Logo" />
@@ -90,18 +92,20 @@
        </button>
        <div class="collapse navbar-collapse" id="navbarNav">
          <ul class="navbar-nav ms-auto">
-           <li class="nav-item">
-             <a class="nav-link" href="index.html">Home</a>
-           </li>
-           <li class="nav-item">
-             <a class="nav-link" href="aboutUs.html">About Us</a>
-           </li>
-           <li class="nav-item">
-             <a class="nav-link" href="product.html">Product</a>
-           </li>
-           <li class="nav-item">
-             <a class="nav-link" href="profil.html">Login</a>
-           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="progress.html">Progress</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="daily-coding.html"
+              >Daily Coding</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="profil.html">Profil</a>
+          </li>
          </ul>
        </div>
      </div>
