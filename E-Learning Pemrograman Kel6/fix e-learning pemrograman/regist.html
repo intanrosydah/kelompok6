@@ -30,22 +30,12 @@
         color: white;
       }
 
-      /* Style default untuk input */
-      input[type="email"],
-      input[type="password"] {
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        padding: 10px;
-        font-size: 16px;
-        outline: none;
-        transition: all 0.3s ease-in-out; /* Animasi transisi */
+      .form-outline input {
+        border-radius: 0.25rem;
       }
 
-      /* Style ketika input di-focus atau diklik */
-      input[type="email"]:focus,
-      input[type="password"]:focus {
-        border-color: #007bff; /* Warna biru ketika fokus */
-        box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Efek bayangan */
+      .form-label {
+        color: #bbb;
       }
 
       .divider:after,
@@ -55,24 +45,29 @@
         height: 1px;
         background: #eee;
       }
+
       .h-custom {
-        height: calc(100% - 73px);
+        height: 100vh;
       }
 
-      .form-check-label {
-        color: #bbb;
+      .social-icons button {
+        border: none;
       }
 
-      @media (max-width: 450px) {
-        .h-custom {
-          height: 100%;
+      .bg-primary {
+        background-color: #007bff !important;
+      }
+
+      @media (max-width: 768px) {
+        .img-fluid {
+          display: none;
         }
       }
     </style>
   </head>
   <body>
     <section class="vh-100">
-      <div class="container-fluid h-custom">
+      <div class="container py-5 h-custom">
         <div class="row d-flex justify-content-center align-items-center h-100">
           <div class="col-md-9 col-lg-6 col-xl-5">
             <img
@@ -84,66 +79,66 @@
           <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
             <form id="loginForm">
               <div
-                class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start"
+                class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start mb-4"
               >
-                <p class="lead fw-normal mb-0 me-3">Sign in with</p>
-                <button type="button" class="btn btn-primary btn-floating mx-1">
-                  <i class="fab fa-facebook-f"></i>
-                </button>
-
-                <button type="button" class="btn btn-primary btn-floating mx-1">
-                  <i class="fab fa-google"></i>
-                </button>
-
-                <button type="button" class="btn btn-primary btn-floating mx-1">
-                  <i class="fab fa-linkedin-in"></i>
-                </button>
+                <p class="lead fw-normal text-center me-3">Registrasi</p>
               </div>
 
-              <div class="divider d-flex align-items-center my-4">
-                <p class="text-center fw-bold mx-3 mb-0">Or</p>
-              </div>
-
-              <!-- Email input -->
               <div class="form-outline mb-4">
                 <input
+                  type="text"
+                  id="formName"
+                  class="form-control form-control-lg"
+                  placeholder="Enter your name"
+                  required
+                />
+                <label class="form-label" for="formName">Nama</label>
+              </div>
+
+              <div class="form-outline mb-3">
+                <input
+                  type="text"
+                  id="formUsername"
+                  class="form-control form-control-lg"
+                  placeholder="Enter your username"
+                  required
+                />
+                <label class="form-label" for="formUsername">Username</label>
+              </div>
+
+              <div class="form-outline mb-3">
+                <input
                   type="email"
-                  id="form3Example3"
+                  id="formEmail"
                   class="form-control form-control-lg"
                   placeholder="Enter a valid email"
                   required
                 />
-                <label class="form-label" for="form3Example3"
-                  >Email address</label
-                >
+                <label class="form-label" for="formEmail">Email address</label>
               </div>
 
-              <!-- Password input -->
               <div class="form-outline mb-3">
                 <input
                   type="password"
-                  id="form3Example4"
+                  id="formPassword"
                   class="form-control form-control-lg"
                   placeholder="Enter password"
                   required
                 />
-                <label class="form-label" for="form3Example4">Password</label>
+                <label class="form-label" for="formPassword">Password</label>
               </div>
 
-              <!-- Remember me and Forgot password -->
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="form-check mb-0">
-                  <input
-                    class="form-check-input me-2"
-                    type="checkbox"
-                    value=""
-                    id="form2Example3"
-                  />
-                  <label class="form-check-label" for="form2Example3">
-                    Remember me
-                  </label>
-                </div>
-                <a href="#!" class="body">Forgot password?</a>
+              <div class="form-outline mb-3">
+                <input
+                  type="password"
+                  id="formRepeatPassword"
+                  class="form-control form-control-lg"
+                  placeholder="Enter repeat password"
+                  required
+                />
+                <label class="form-label" for="formRepeatPassword"
+                  >Repeat password</label
+                >
               </div>
 
               <div class="text-center text-lg-start mt-4 pt-2">
@@ -152,27 +147,21 @@
                   class="btn btn-primary btn-lg"
                   style="padding-left: 2.5rem; padding-right: 2.5rem"
                 >
-                  Login
+                  Sign In
                 </button>
-                <p class="small fw-bold mt-2 pt-1 mb-0">
-                  Don't have an account?
-                  <a href="#!" class="link-danger">Register</a>
-                </p>
               </div>
             </form>
           </div>
         </div>
       </div>
 
-      <div
+      <!-- <div
         class="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5 bg-primary"
       >
-        <!-- Copyright -->
         <div class="text-white mb-3 mb-md-0">
           &copy; 2024 AIFYCODE Learning | All Rights Reserved. Made With Love
         </div>
 
-        <!-- Social media icons -->
         <div>
           <a href="#!" class="text-white me-4">
             <i class="fab fa-facebook-f"></i>
@@ -187,34 +176,24 @@
             <i class="fab fa-linkedin-in"></i>
           </a>
         </div>
-      </div>
+      </div> -->
     </section>
 
     <!-- Bootstrap JS and Popper.js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Custom JS for Login Validation -->
     <script>
       document
         .getElementById("loginForm")
         .addEventListener("submit", function (e) {
-          e.preventDefault(); // Mencegah form submit otomatis
+          e.preventDefault();
 
-          const email = document.getElementById("form3Example3").value;
-          const password = document.getElementById("form3Example4").value;
+          const email = document.getElementById("formEmail").value;
+          const password = document.getElementById("formPassword").value;
 
-          // Login admin
           if (email === "admin@gmail.com" && password === "admin123") {
             alert("Admin login successful!");
-            window.location.href = "Admin/data-pengguna.html"; // Redirect ke halaman data-pengguna
-          }
-          // Login pengguna umum
-          else if (email === "user@gmail.com" && password === "user123") {
-            alert("User login successful!");
-            window.location.href = "home.html"; // Redirect ke halaman home
-          }
-          // Jika login tidak valid
-          else {
+          } else {
             alert("Invalid email or password. Please try again.");
           }
         });
