@@ -51,12 +51,60 @@
           class="rounded-circle"
           alt="User"
         />
-        <p>Zen</p>
+        <p>Admin</p>
       </div>
       <a href="#">Home</a>
-      <a href="#">Master Data</a>
-      <a href="#">Menu Management</a>
-      <a href="#">Logout</a>
+
+      <!-- Dropdown Manajemen Pengguna -->
+      <a
+        class="dropdown-toggle"
+        data-bs-toggle="collapse"
+        href="#manajemenPengguna"
+        role="button"
+        aria-expanded="false"
+        aria-controls="manajemenPengguna"
+      >
+        Manajemen Pengguna
+      </a>
+      <div class="collapse" id="manajemenPengguna">
+        <a href="data-pengguna.html">Data Pengguna</a>
+        <a href="monitoring-aktivitas.html">Monitoring Aktivitas Pengguna</a>
+        <a href="manajemen-sertifikat.html">Sertifikat Pengguna</a>
+      </div>
+
+      <!-- Dropdown Manajemen Kursus -->
+      <a
+        class="dropdown-toggle"
+        data-bs-toggle="collapse"
+        href="#manajemenKursus"
+        role="button"
+        aria-expanded="false"
+        aria-controls="manajemenKursus"
+      >
+        Manajemen Kursus
+      </a>
+      <div class="collapse" id="manajemenKursus">
+        <a href="manajemen-jadwal-kursus.html">Jadwal Kursus</a>
+        <a href="manajemen-materi-kursus.html">Materi Kursus</a>
+        <a href="manajemen-modul-kursus.html">Modul Kursus</a>
+      </div>
+
+      <!-- Dropdown Manajemen Pembayaran -->
+      <a
+        class="dropdown-toggle"
+        data-bs-toggle="collapse"
+        href="#manajemenPembayaran"
+        role="button"
+        aria-expanded="false"
+        aria-controls="manajemenPembayaran"
+      >
+        Manajemen Pembayaran
+      </a>
+      <div class="collapse" id="manajemenPembayaran">
+        <a href="manajemen-pembayaran.html">Riwayat Pembayaran</a>
+      </div>
+
+      <a href="index.html">Logout</a>
     </div>
 
     <!-- Header/Navbar -->
@@ -66,8 +114,8 @@
     >
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
-          <img src="https://via.placeholder.com/30" alt="Logo" />
-          SISFO
+          <img src="images/new-logo.png" alt="Logo" />
+          AIFYCODE Learning
         </a>
         <button
           class="navbar-toggler"
@@ -78,18 +126,11 @@
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
-          </li>
-        </ul>
-        <form class="d-flex">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
+          <form class="d-flex">
             <input
               class="form-control me-2"
               type="search"
@@ -108,7 +149,7 @@
     <div class="content pt-5 mt-3">
       <div class="container mt-5">
         <div class="d-flex justify-content-between align-items-center mb-4">
-          <h3>RIWAYAT PEMBAYARAN</h3>        
+          <h3>RIWAYAT PEMBAYARAN</h3>
         </div>
 
         <div class="table-responsive">
@@ -167,7 +208,7 @@
                 <td><span class="badge bg-danger">Belum Bayar</span></td>
                 <td>
                   <button class="btn btn-primary btn-sm">Cetak</button>
-                </td>              
+                </td>
               </tr>
               <tr>
                 <td>5</td>
@@ -178,7 +219,7 @@
                 <td><span class="badge bg-danger">Belum Bayar</span></td>
                 <td>
                   <button class="btn btn-primary btn-sm">Cetak</button>
-                </td>              
+                </td>
               </tr>
             </tbody>
           </table>
