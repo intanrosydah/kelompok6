@@ -203,10 +203,42 @@
           const email = document.getElementById("form3Example3").value;
           const password = document.getElementById("form3Example4").value;
 
+          // Login admin
           if (email === "admin@gmail.com" && password === "admin123") {
             alert("Admin login successful!");
-            // Di sini bisa ditambahkan logika pengalihan halaman atau aksi lain untuk admin
-          } else {
+            // Coba akses halaman Admin/data-pengguna.html
+            fetch("Admin/data-pengguna.html")
+              .then((response) => {
+                if (response.ok) {
+                  window.location.href = "Admin/data-pengguna.html"; // Redirect ke halaman data-pengguna
+                } else {
+                  alert("Halaman Admin/data-pengguna.html tidak ditemukan.");
+                }
+              })
+              .catch((error) => {
+                alert(
+                  "Terjadi kesalahan saat mengakses halaman Admin/data-pengguna.html."
+                );
+              });
+          }
+          // Login pengguna umum
+          else if (email === "user@gmail.com" && password === "user123") {
+            alert("User login successful!");
+            // Coba akses halaman home.html
+            fetch("home.html")
+              .then((response) => {
+                if (response.ok) {
+                  window.location.href = "home.html"; // Redirect ke halaman home
+                } else {
+                  alert("Halaman home.html tidak ditemukan.");
+                }
+              })
+              .catch((error) => {
+                alert("Terjadi kesalahan saat mengakses halaman home.html.");
+              });
+          }
+          // Jika login tidak valid
+          else {
             alert("Invalid email or password. Please try again.");
           }
         });
